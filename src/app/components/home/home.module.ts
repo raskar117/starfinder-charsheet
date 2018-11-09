@@ -7,17 +7,13 @@ import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 
 @NgModule({
+  entryComponents: [HomePage],
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: HomePage
-      }
-    ])
+    IonicModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  exports: [HomePage]
 })
 export class HomePageModule {}
