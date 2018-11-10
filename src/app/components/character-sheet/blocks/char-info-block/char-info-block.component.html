@@ -1,7 +1,26 @@
-<p>
-  char-info-block works!
-</p>
-<ion-card>
-  <ion-card-header>Character Name</ion-card-header>
-  <ion-card-content>______________</ion-card-content>
-</ion-card>
+<p-accordion>
+  <p-accordionTab [header]="'Character Info - Level : ' + character.information.level">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Class</ion-label>
+            <ion-input [value]="character.information.classType"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Race</ion-label>
+            <ion-input [value]="character.information.race"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Theme</ion-label>
+            <ion-input [value]="character.information.theme"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </p-accordionTab>
+</p-accordion>

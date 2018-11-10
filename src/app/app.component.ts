@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { HomePage } from './components/home/home.page';
 import { Location } from '@angular/common';
+import { CharacterSheetComponent } from './components/character-sheet/character-sheet.component';
 
 @Component({
   selector: 'app-root',

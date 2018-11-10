@@ -1,5 +1,6 @@
-import { Nav } from '@ionic/angular';
+import { Nav, NavParams } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
+import { Character } from '../../models/character.model';
 
 @Component({
   selector: 'app-character-sheet',
@@ -8,10 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterSheetComponent implements OnInit {
 
-  public character: any;
+  public character: Character;
 
   constructor(
-    private nav: Nav
+    private nav: NavParams
   ) { }
 
   ngOnInit() {
