@@ -1,5 +1,5 @@
 import { Character } from './../../models/character.model';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Nav } from '@ionic/angular';
 import { CharacterSheetComponent } from '../character-sheet/character-sheet.component';
 import { CharacterInformation } from '../../models/character-blocks/character-information.model';
@@ -15,11 +15,15 @@ import { Ability } from '../../models/character-blocks/ability.model';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
   constructor(
     private nav: Nav
   ) {}
+
+  ngOnInit() {
+    this.createNewCharacter();
+  }
 
   public createNewCharacter() {
     this.nav.push(CharacterSheetComponent, { character: new Character(
