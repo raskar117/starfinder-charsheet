@@ -1,14 +1,24 @@
 {
   "CHARACTER": {
-    "BLOCK" : {
+    "BLOCK": {
       "INFORMATION": {
         "TITLE": "Information",
         "CLASS": "Class",
         "RACE": "Race",
-        "THEME": "Theme"
+        "THEME": "Theme",
+        "SIZE": "Size",
+        "SPEED": "Speed",
+        "GENDER": "Gender",
+        "HOMEWORLD": "Home World",
+        "ALIGNMENT": "Alignment",
+        "DEITY": "Deity",
+        "PLAYER": "Player"
       },
       "ABILITIES_SCORE": {
         "TITLE": "Ability Score"
+      },
+      "SKILLS": {
+        "TITLE": "Skills"
       }
     },
     "ABILITY": {
@@ -18,6 +28,28 @@
       "INTELLIGENCE": "Intelligence",
       "WISDOM": "Wisdom",
       "CHARISMA": "Charisma"
+    },
+    "SKILLS": {
+      "ACROBATICS": "Acrobatics",
+      "ATHLETICS": "Athletics",
+      "BLUFF": "Bluff",
+      "COMPUTERS": "Computers",
+      "CULTURE": "Culture",
+      "DIPLOMACY": "Diplomacy",
+      "DISGUISE": "Disguise",
+      "ENGINEERING": "Engineering",
+      "INTIMIDATE": "Intimidate",
+      "LIFESCIENCE": "Life Science",
+      "MEDICINE": "Medicine",
+      "MYSTICISM": "Mysticism",
+      "PERCEPTION": "Perception",
+      "PHYSICALSCIENCE": "Physical Science",
+      "PILOTING": "Piloting",
+      "PROFESSIONS": "Professions",
+      "SENSEMOTIVE": "Sense Motive",
+      "SLEIGHTOFHAND": "Sleight of Hand",
+      "STEALTH": "Stealth",
+      "SURVIVAL": "Survival"
     }
   }
 }

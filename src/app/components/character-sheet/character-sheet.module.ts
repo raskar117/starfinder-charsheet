@@ -11,6 +11,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AbilitiesScoreBlockComponent } from './blocks/abilities-score-block/abilities-score-block.component';
+import { SkillsBlockComponent } from './blocks/skills-block/skills-block.component';
 
 @NgModule({
   entryComponents: [CharacterSheetComponent],
@@ -28,7 +29,8 @@ import { AbilitiesScoreBlockComponent } from './blocks/abilities-score-block/abi
     CharsheetInputTextComponent,
     CharInfoBlockComponent,
     DescriptionBlockComponent,
-    AbilitiesScoreBlockComponent
+    AbilitiesScoreBlockComponent,
+    SkillsBlockComponent
   ],
   exports: [CharacterSheetComponent]
 })

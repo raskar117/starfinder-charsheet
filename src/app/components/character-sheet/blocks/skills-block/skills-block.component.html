@@ -1,0 +1,10 @@
+<p-accordion class="block-accordion">
+  <p-accordionTab [selected]="'true'" [header]="'CHARACTER.BLOCK.SKILLS.TITLE' | translate">
+    <div class="skills-container">
+      <div class="skill-row" *ngFor="let skill of skillsList | keyvalue; let i = index">
+        <div class="skill-label">{{'CHARACTER.SKILLS.' + skill.key | translate}}</div>
+        <div class="skill-total">{{skill.value.total}}</div>
+      </div>
+    </div>
+  </p-accordionTab>
+</p-accordion>
