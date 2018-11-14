@@ -1,15 +1,15 @@
 <p-accordion class="block-accordion">
-  <p-accordionTab [selected]="'true'" [header]="'Character Info - Level : ' + character.information.level">
+  <p-accordionTab [selected]="'true'" [header]="'CHARACTER.BLOCK.INFORMATION.TITLE' | translate">
     <ion-grid>
       <ion-row>
         <ion-col>
-          <app-input-text [placeholder]="'Class'" [value]="character.information.classType"></app-input-text>
+          <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.CLASS' | translate" [value]="character.information.classType"></app-input-text>
         </ion-col>
         <ion-col>
-          <app-input-text [placeholder]="'Race'" [value]="character.information.race"></app-input-text>
+          <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.RACE' | translate" [value]="character.information.race"></app-input-text>
         </ion-col>
         <ion-col>
-          <app-input-text [placeholder]="'Theme'" [value]="character.information.theme"></app-input-text>
+          <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.THEME' | translate" [value]="character.information.theme"></app-input-text>
         </ion-col>
       </ion-row>
     </ion-grid>

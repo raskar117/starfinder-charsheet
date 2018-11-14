@@ -1,0 +1,19 @@
+<p-accordion class="block-accordion">
+  <p-accordionTab [selected]="'true'" [header]="'CHARACTER.BLOCK.ABILITIES_SCORE.TITLE' | translate">
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let ability of abilitiesList | keyvalue; let i = index">
+          <ion-card class="card-ability">
+            <ion-card-header>
+              <h5 class="short-label">{{ 'CHARACTER.ABILITY.' + ability.key | translate | slice:0:3 | uppercase }}</h5>
+              <span class="long-label">{{ 'CHARACTER.ABILITY.' + ability.key | translate }}</span>
+            </ion-card-header>
+            <ion-card-content>
+              <h2>{{ ability.value.score }} (+{{ability.value.modifier}})</h2>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </p-accordionTab>
+</p-accordion>

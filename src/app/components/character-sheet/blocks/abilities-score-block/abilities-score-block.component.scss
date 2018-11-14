@@ -1,0 +1,22 @@
+.card-ability {
+  margin:0 2px;
+  border: 1px solid black;
+  ion-card-header {
+    padding: 0;
+    text-align: center;
+    border-bottom: 1px solid black;
+    .short-label {
+      font-size: 14px;
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+    .long-label {
+      font-size: 10px;
+    }
+  }
+  ion-card-content {
+    font-size: 18px;
+    padding: 5px;
+    text-align: center;
+  }
+}

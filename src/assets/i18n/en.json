@@ -1,0 +1,23 @@
+{
+  "CHARACTER": {
+    "BLOCK" : {
+      "INFORMATION": {
+        "TITLE": "Information",
+        "CLASS": "Class",
+        "RACE": "Race",
+        "THEME": "Theme"
+      },
+      "ABILITIES_SCORE": {
+        "TITLE": "Ability Score"
+      }
+    },
+    "ABILITY": {
+      "STRENGTH": "Strength",
+      "DEXTERITY": "Dexterity",
+      "CONSTITUTION": "Constitution",
+      "INTELLIGENCE": "Intelligence",
+      "WISDOM": "Wisdom",
+      "CHARISMA": "Charisma"
+    }
+  }
+}

@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { HomePage } from './components/home/home.page';
 import { Location } from '@angular/common';
 import { CharacterSheetComponent } from './components/character-sheet/character-sheet.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -31,6 +32,7 @@ export class AppComponent {
   public home = HomePage;
 
   constructor(
+    private translateService: TranslateService,
     private platform: Platform,
     private location: Location,
     private splashScreen: SplashScreen,
@@ -41,6 +43,7 @@ export class AppComponent {
   }
 
   initializeApp() {
+    this.translateService.setDefaultLang('en');
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();

@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { CharsheetInputTextComponent } from './widgets/charsheet-input-text/charsheet-input-text.component';
 import { DescriptionBlockComponent } from './blocks/description-block/description-block.component';
 import { CharInfoBlockComponent } from './blocks/char-info-block/char-info-block.component';
@@ -9,14 +10,16 @@ import { AccordionModule } from 'primeng/accordion';
 import { InputTextModule } from 'primeng/inputtext';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AbilitiesScoreBlockComponent } from './blocks/abilities-score-block/abilities-score-block.component';
 
 @NgModule({
   entryComponents: [CharacterSheetComponent],
   imports: [
     CommonModule,
-    IonicModule,
     BrowserModule,
     BrowserAnimationsModule,
+    IonicModule,
+    TranslateModule,
     AccordionModule,
     InputTextModule
   ],
@@ -24,7 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CharacterSheetComponent,
     CharsheetInputTextComponent,
     CharInfoBlockComponent,
-    DescriptionBlockComponent
+    DescriptionBlockComponent,
+    AbilitiesScoreBlockComponent
   ],
   exports: [CharacterSheetComponent]
 })
