@@ -1,5 +1,8 @@
 {
   "CHARACTER": {
+    "LEVEL" : {
+      "TITLE": "Level"
+    },
     "BLOCK": {
       "INFORMATION": {
         "TITLE": "Information",

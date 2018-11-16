@@ -5,12 +5,13 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 10px;
   .skill-row {
     font-family: $app-main-font;
     flex: 0 1 auto;
     display: flex;
     margin-bottom: 10px;
-    border: 1px solid $app-main-border-color;
+    box-shadow: -3px 1px $app-dark-slate-gray;
     border-radius: 5px;
     min-width: 150px;
     .skill-label {
