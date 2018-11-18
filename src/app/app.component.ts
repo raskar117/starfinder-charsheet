@@ -1,30 +1,30 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { Platform, NavController, Config } from '@ionic/angular';
+import { Platform, Config, Nav } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { HomePage } from './components/home/home.page';
-import { Location } from '@angular/common';
 import { CharacterSheetComponent } from './components/character-sheet/character-sheet.component';
 import { TranslateService } from '@ngx-translate/core';
+import { ViewController } from '@ionic/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  @ViewChild('nav') nav: NavController;
+  @ViewChild('nav') nav: Nav;
   public configs: Config;
 
   public appPages = [
     {
       title: 'Home',
-      url: '/home',
+      component: HomePage,
       icon: 'home'
     },
     {
       title: 'Character',
-      url: '/character',
+      component: CharacterSheetComponent,
       icon: 'people'
     }
   ];
@@ -34,9 +34,7 @@ export class AppComponent {
   constructor(
     private translateService: TranslateService,
     private platform: Platform,
-    private location: Location,
     private splashScreen: SplashScreen,
-    private navCtrl: NavController,
     private statusBar: StatusBar
   ) {
     this.initializeApp();
@@ -48,5 +46,9 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+
+  goTo(comp: ViewController) {
+    this.nav.push(comp);
   }
 }

@@ -3,7 +3,7 @@
     <ion-grid>
       <ion-row>
         <ion-col *ngFor="let ability of abilitiesList | keyvalue; let i = index">
-          <ion-card class="card-ability">
+          <ion-card size="2" class="card-ability">
             <ion-card-header>
               <h5 class="short-label">{{ 'CHARACTER.ABILITY.' + ability.key | translate | slice:0:3 | uppercase }}</h5>
               <span class="long-label">{{ 'CHARACTER.ABILITY.' + ability.key | translate }}</span>

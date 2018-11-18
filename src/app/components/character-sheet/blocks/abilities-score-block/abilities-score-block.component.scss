@@ -1,7 +1,7 @@
 @import "../../../../../theme/variables.scss";
 
 .card-ability {
-  margin:0 2px;
+  margin: 0;
   border: 1px solid black;
   ion-card-header {
     font-family: $app-main-font;
@@ -11,17 +11,25 @@
     .short-label {
       font-size: 14px;
       margin-top: 0;
-      padding-top: 5px;
-      margin-bottom: 0;
+      padding-top: 3px;
+      margin-bottom: 10px;
+      font-weight: bold;
     }
     .long-label {
       font-size: 10px;
+      position: absolute;
+      top: 17px;
+      left: 0px;
+      width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
   }
   ion-card-content {
     font-family: $app-main-font;
-    font-size: 18px;
-    padding: 5px;
+    font-size: 16px;
+    padding: 0;
     text-align: center;
   }
 }

@@ -41,6 +41,8 @@
 }
 
 .character-blocks-container {
+    overflow-y: auto;
+    overflow-x: hidden;
     height: 100%;
     width: 100%;
 }
@@ -54,8 +56,7 @@
                 color: $app-white;
                 text-shadow: 1px 1px 1px $app-dark-slate-gray;
                 padding: 5px;
-                padding-right: 30px;
-                width: 150px;
+                width: 140px;
                 border: solid $app-turquoise;
                 border-width: 0px 2px 2px 0px;
                 background-color: $app-dark-slate-blue;
