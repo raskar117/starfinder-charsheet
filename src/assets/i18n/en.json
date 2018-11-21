@@ -22,7 +22,13 @@
       },
       "SKILLS": {
         "TITLE": "Skills"
-      }
+      },
+      "HEALTH_RESOLVE": {
+        "TITLE": "Health and Resolve",
+        "STAMINA": "Stamina Points",
+        "HIT": "Hit Points",
+        "RESOLVE": "Resolve Points"
+      } 
     },
     "ABILITY": {
       "STRENGTH": "Strength",

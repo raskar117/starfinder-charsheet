@@ -5,12 +5,12 @@
 :root {
 
   /** primary **/
-  --ion-color-primary: #3880ff;
-  --ion-color-primary-rgb: 56,128,255;
+  --ion-color-primary: #405c78;
+  --ion-color-primary-rgb: 64, 92, 120;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255,255,255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary-shade: #0f5078;
+  --ion-color-primary-tint: #39b7eb;
 
   /** secondary **/
   --ion-color-secondary: #0cd1e8;
@@ -96,3 +96,7 @@ $app-dark-slate-gray: #211f27;
 $app-background-gradient-blue: -moz-linear-gradient(top, rgba(30,87,153,0) 0%, rgba(30,87,153,0.8) 15%, rgba(30,87,153,1) 19%, rgba(30,87,153,1) 20%, rgba(41,137,216,1) 50%, rgba(30,87,153,1) 80%, rgba(30,87,153,1) 81%, rgba(30,87,153,0.8) 85%, rgba(30,87,153,0) 100%); /* FF3.6-15 */
 $app-background-gradient-blue: -webkit-linear-gradient(top, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%); /* Chrome10-25,Safari5.1-6 */
 $app-background-gradient-blue: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+$app-gradient-dark-slate-blue: -moz-linear-gradient(top, $app-turquoise 0%, $app-dark-slate-blue 12%, $app-dark-slate-blue 88%, $app-turquoise 100%); /* FF3.6-15 */
+$app-gradient-dark-slate-blue: -webkit-linear-gradient(top, $app-turquoise 0%, $app-dark-slate-blue 12%, $app-dark-slate-blue 88%, $app-turquoise 100%); /* Chrome10-25,Safari5.1-6 */
+$app-gradient-dark-slate-blue: linear-gradient(to bottom, $app-turquoise 0%, $app-dark-slate-blue 12%, $app-dark-slate-blue 88%, $app-turquoise 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */

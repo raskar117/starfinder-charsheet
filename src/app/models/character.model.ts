@@ -3,6 +3,7 @@ import { CharacterInformation } from './character-blocks/character-information.m
 import { Abilities } from './character-blocks/abilities.model';
 import { Skill } from './character-blocks/skill.model';
 import { Profession } from './character-blocks/profession.model';
+import { HealthResolve, HealthResolvePoints } from './character-blocks/health-resolve.model';
 
 export class Character {
     public information: CharacterInformation;
@@ -10,7 +11,7 @@ export class Character {
     public abilities: Abilities;
     public skills: Skills;
     public initiative: any;
-    public health: any;
+    public healthResolve: HealthResolve;
     public armorClass: any;
     public savingThrows: any;
     public attackBonuses: any;
@@ -18,22 +19,27 @@ export class Character {
 
 
     constructor(information: CharacterInformation, description: string, abilities: Abilities, skills: Skills,
-        initiative: any, health: any, armorClass: any, savingThrows: any, attackBonuses: any, weapons: Array<any>) {
+        initiative: any, healthResolve: HealthResolve, armorClass: any, savingThrows: any, attackBonuses: any, weapons: Array<any>) {
         this.information = information;
         this.description = description;
         this.abilities = abilities;
-        this.skills = skills ? skills : this.initializeSkills();
+        this.skills = skills ? skills : this.emptySkills;
         this.initiative = initiative;
-        this.health = health;
+        this.healthResolve = healthResolve ? healthResolve : this.emptyHealthResolve;
         this.armorClass = armorClass;
         this.savingThrows = savingThrows;
         this.attackBonuses = attackBonuses;
         this.weapons = weapons;
     }
 
-    private initializeSkills(): Skills {
+    private get emptySkills(): Skills {
         const emptySkill = new Skill(0, 0, 0, 0);
         return new Skills(emptySkill, emptySkill, emptySkill, emptySkill, emptySkill, emptySkill, emptySkill, emptySkill, emptySkill, emptySkill,
             emptySkill, emptySkill, emptySkill, emptySkill, emptySkill, new Array<Profession>(), emptySkill, emptySkill, emptySkill, emptySkill);
+    }
+
+    private get emptyHealthResolve(): HealthResolve {
+        const emptyHealthResolve = new HealthResolvePoints(0,0);
+        return new HealthResolve(emptyHealthResolve, emptyHealthResolve, emptyHealthResolve);
     }
 }

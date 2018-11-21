@@ -12,6 +12,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AbilitiesScoreBlockComponent } from './blocks/abilities-score-block/abilities-score-block.component';
 import { SkillsBlockComponent } from './blocks/skills-block/skills-block.component';
+import { HealthResolveBlockComponent } from './blocks/health-resolve-block/health-resolve-block.component';
 
 @NgModule({
   entryComponents: [CharacterSheetComponent],
@@ -30,7 +31,8 @@ import { SkillsBlockComponent } from './blocks/skills-block/skills-block.compone
     CharInfoBlockComponent,
     DescriptionBlockComponent,
     AbilitiesScoreBlockComponent,
-    SkillsBlockComponent
+    SkillsBlockComponent,
+    HealthResolveBlockComponent
   ],
   exports: [CharacterSheetComponent]
 })

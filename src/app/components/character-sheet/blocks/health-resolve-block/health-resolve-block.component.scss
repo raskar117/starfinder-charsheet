@@ -1,0 +1,30 @@
+@import "../../../../../theme/variables.scss";
+
+.health-resolve-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: $app-dark-slate-blue;
+    color: white;
+    padding: 5px 0;
+    border: solid $app-turquoise;
+    border-width: 0 0 2px 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%,
+        10px 100%, 0% calc(100% - 10px), 0% 10px);
+    clip-path: polygon(0 0, 100% 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%,
+        10px 100%, 0% calc(100% - 10px), 0% 10px);
+    .health-resolve-points {
+        flex: 0 1 auto;
+        font-family: $app-main-font;
+        text-align: center;
+        line-height: 10px;
+        width: 25%;
+        .points {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .label {
+            font-size: 10px;
+        }
+    }
+}
