@@ -38,7 +38,8 @@
     "primeicons": "^1.0.0",
     "primeng": "^6.1.6",
     "rxjs": "6.2.2",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "cordova-plugin-firebase": "~2.0.5"
   },
   "devDependencies": {
     "@angular-devkit/architect": "~0.8.5",
@@ -76,7 +77,8 @@
       "cordova-plugin-ionic-webview": {
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
-      "cordova-plugin-ionic-keyboard": {}
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-firebase": {}
     },
     "platforms": [
       "android"

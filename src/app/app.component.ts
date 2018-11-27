@@ -7,6 +7,7 @@ import { HomePage } from './components/home/home.page';
 import { CharacterSheetComponent } from './components/character-sheet/character-sheet.component';
 import { TranslateService } from '@ngx-translate/core';
 import { ViewController } from '@ionic/core';
+import { SettingsComponent } from './components/settings/settings.component';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,11 @@ export class AppComponent {
       title: 'Character',
       component: CharacterSheetComponent,
       icon: 'people'
+    },
+    {
+      title: 'Settings',
+      component: SettingsComponent,
+      icon: 'hammer'
     }
   ];
 

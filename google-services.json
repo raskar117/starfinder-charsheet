@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "531124309972",
+    "firebase_url": "https://starfinder-charsheet.firebaseio.com",
+    "project_id": "starfinder-charsheet",
+    "storage_bucket": "starfinder-charsheet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531124309972:android:1e683af74ed1716f",
+        "android_client_info": {
+          "package_name": "com.raskar117.starfindercharsheetapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "531124309972-4no92ih5klu8mtirovndqjn4sbd19dah.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6B0QpyEseocJ-IlUcZPZ4PAQEQXm5DTg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

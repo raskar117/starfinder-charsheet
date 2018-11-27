@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { CharacterSheetModule } from './components/character-sheet/character-sheet.module';
 import { HomePageModule } from './components/home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SettingsModule } from './components/settings/settings.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -37,6 +38,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     IonicModule.forRoot(),
     RouterModule.forRoot([]),
     HomePageModule,
+    SettingsModule,
     CharacterSheetModule
   ],
   providers: [
