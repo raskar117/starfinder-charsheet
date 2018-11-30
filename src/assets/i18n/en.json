@@ -21,7 +21,12 @@
         "TITLE": "Ability Score"
       },
       "SKILLS": {
-        "TITLE": "Skills"
+        "TITLE": "Skills",
+        "TOTAL": "Total",
+        "RANK": "Rank",
+        "CLASS_BONUS": "Class bonus",
+        "ABILITY_MODIFIER": "Ability mod",
+        "MISC_MODIFIER": "Misc mod"
       },
       "HEALTH_RESOLVE": {
         "TITLE": "Health and Resolve",

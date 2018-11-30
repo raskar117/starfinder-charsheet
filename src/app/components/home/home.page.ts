@@ -26,7 +26,7 @@ export class HomePage implements OnInit {
   }
 
   public createNewCharacter() {
-    this.nav.push(CharacterSheetComponent, { character: new Character(
+    this.nav.push(CharacterSheetComponent, { character: new Character(null,
       new CharacterInformation('Elliad', ClassType.OPERATIVE, 2, RaceType.KASATHAS, Theme.OUTLAW, 170, 30, Gender.MALE, 'test', null, null, 'Vincent'),
       'blablabla',
       new Abilities(new Ability(14), new Ability(17), new Ability(10), new Ability(12), new Ability(10), new Ability(10)),

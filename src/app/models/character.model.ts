@@ -4,8 +4,9 @@ import { Abilities } from './character-blocks/abilities.model';
 import { Skill } from './character-blocks/skill.model';
 import { Profession } from './character-blocks/profession.model';
 import { HealthResolve, HealthResolvePoints } from './character-blocks/health-resolve.model';
+import { StorageEntity } from './storage-entity.model';
 
-export class Character {
+export class Character extends StorageEntity {
     public information: CharacterInformation;
     public description: string;
     public abilities: Abilities;
@@ -18,8 +19,10 @@ export class Character {
     public weapons: Array<any>;
 
 
-    constructor(information: CharacterInformation, description: string, abilities: Abilities, skills: Skills,
-        initiative: any, healthResolve: HealthResolve, armorClass: any, savingThrows: any, attackBonuses: any, weapons: Array<any>) {
+    constructor(id: number, information: CharacterInformation, description: string, abilities: Abilities, skills: Skills,
+        initiative: any, healthResolve: HealthResolve, armorClass: any, savingThrows: any, attackBonuses: any, weapons: Array<any>
+    ) {
+        super(id);
         this.information = information;
         this.description = description;
         this.abilities = abilities;
@@ -39,7 +42,7 @@ export class Character {
     }
 
     private get emptyHealthResolve(): HealthResolve {
-        const emptyHealthResolve = new HealthResolvePoints(0,0);
+        const emptyHealthResolve = new HealthResolvePoints(0, 0);
         return new HealthResolve(emptyHealthResolve, emptyHealthResolve, emptyHealthResolve);
     }
 }

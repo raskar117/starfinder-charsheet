@@ -18,12 +18,12 @@
 <ion-grid class="character-blocks-container">
   <ion-row class="health-resolve-row">
     <ion-col>
-      <app-health-resolve-block [character]="character"></app-health-resolve-block>
+      <app-health-resolve-block [editMode]="editMode" [character]="character"></app-health-resolve-block>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
-      <app-char-info-block [character]="character"></app-char-info-block>
+      <app-char-info-block [editMode]="editMode" [character]="character"></app-char-info-block>
     </ion-col>
     <!--
     <ion-col [size]="0" [sizeSm]="4">
@@ -33,30 +33,36 @@
   </ion-row>
   <ion-row>
     <ion-col>
-      <app-abilities-score-block [character]="character"></app-abilities-score-block>
+      <app-abilities-score-block [editMode]="editMode" [character]="character"></app-abilities-score-block>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col [sizeXs]="12" [sizeSm]="6">
-      <app-skills-block [character]="character"></app-skills-block>
+      <app-skills-block [editMode]="editMode" [character]="character"></app-skills-block>
     </ion-col>
     <ion-col></ion-col>
   </ion-row>
 </ion-grid>
 
-<ion-fab class="bottom-sheet-fab" vertical="bottom" horizontal="end">
+<ion-fab *ngIf="!editMode" class="bottom-sheet-fab" vertical="bottom" horizontal="end">
   <ion-fab-button color="primary" class="main-button">
     <ion-icon name="add"></ion-icon>
   </ion-fab-button>
   <ion-fab-list side="top">
     <ion-fab-button>
-      <ion-icon name="create"></ion-icon>
+      <ion-icon name="mail"></ion-icon>
     </ion-fab-button>
     <ion-fab-button>
       <ion-icon name="download"></ion-icon>
     </ion-fab-button>
-    <ion-fab-button>
-      <ion-icon name="mail"></ion-icon>
+    <ion-fab-button (click)="activateEditMode()">
+      <ion-icon name="create"></ion-icon>
     </ion-fab-button>
   </ion-fab-list>
+</ion-fab>
+
+<ion-fab *ngIf="editMode" class="bottom-sheet-fab" vertical="bottom" horizontal="end">
+  <ion-fab-button color="primary" class="main-button" (click)="saveCharacter()">
+    <ion-icon name="save"></ion-icon>
+  </ion-fab-button>
 </ion-fab>

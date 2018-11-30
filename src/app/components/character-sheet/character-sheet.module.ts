@@ -8,11 +8,14 @@ import { CommonModule } from '@angular/common';
 import { CharacterSheetComponent } from './character-sheet.component';
 import { AccordionModule } from 'primeng/accordion';
 import { InputTextModule } from 'primeng/inputtext';
+import { SpinnerModule } from 'primeng/spinner';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AbilitiesScoreBlockComponent } from './blocks/abilities-score-block/abilities-score-block.component';
 import { SkillsBlockComponent } from './blocks/skills-block/skills-block.component';
 import { HealthResolveBlockComponent } from './blocks/health-resolve-block/health-resolve-block.component';
+import { FormsModule } from '@angular/forms';
+import { CharacterService } from '../../services/character.service';
 
 @NgModule({
   entryComponents: [CharacterSheetComponent],
@@ -20,10 +23,12 @@ import { HealthResolveBlockComponent } from './blocks/health-resolve-block/healt
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     IonicModule,
     TranslateModule,
     AccordionModule,
-    InputTextModule
+    InputTextModule,
+    SpinnerModule
   ],
   declarations: [
     CharacterSheetComponent,
@@ -34,6 +39,9 @@ import { HealthResolveBlockComponent } from './blocks/health-resolve-block/healt
     SkillsBlockComponent,
     HealthResolveBlockComponent
   ],
-  exports: [CharacterSheetComponent]
+  exports: [CharacterSheetComponent],
+  providers: [
+    CharacterService
+  ]
 })
 export class CharacterSheetModule { }

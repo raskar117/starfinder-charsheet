@@ -11,6 +11,11 @@ export class SkillsBlockComponent extends BlockComponent implements OnInit {
 
   public skillsList: Map<string, Skill>;
 
+  public minClassBonus: number;
+  public minAbilityModifier: number;
+  public minMiscModifier: number;
+  public minRanks: number;
+
   constructor() {
     super();
   }

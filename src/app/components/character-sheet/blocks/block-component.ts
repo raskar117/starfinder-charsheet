@@ -3,7 +3,7 @@ import { Character } from '../../../models/character.model';
 import { DisplayMode } from '../../../enums/display-mode.enum';
 
 export class BlockComponent {
-  @Input() isReadOnly: boolean;
+  @Input() editMode: boolean;
   @Input() character: Character;
   @Input() displayMode: DisplayMode;
 
