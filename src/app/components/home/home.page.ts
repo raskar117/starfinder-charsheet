@@ -9,6 +9,7 @@ import { Theme } from '../../enums/theme.enum';
 import { Gender } from '../../enums/gender.enum';
 import { Abilities } from '../../models/character-blocks/abilities.model';
 import { Ability } from '../../models/character-blocks/ability.model';
+import { CharacterService } from '../../services/character.service';
 
 @Component({
   selector: 'app-home',
@@ -16,13 +17,25 @@ import { Ability } from '../../models/character-blocks/ability.model';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
+  public charactersList: Array<Character>;
 
   constructor(
-    private nav: Nav
+    private nav: Nav,
+    private characterService: CharacterService,
   ) {}
 
   ngOnInit() {
     // this.createNewCharacter();
+    this.charactersList = new Array<Character>();
+    this.characterService.getCharacters().subscribe((characters: Array<Character>) => {
+      this.charactersList = characters;
+      if (this.charactersList.length === 0) {
+        this.charactersList.push(new Character(null,
+          new CharacterInformation('', null, 1, null, null, null, null, null, '', null, null, ''), '',
+          new Abilities(new Ability(0), new Ability(0), new Ability(0), new Ability(0), new Ability(0), new Ability(0)),
+          null, null, null, null, null, null, null));
+      }
+    });
   }
 
   public createNewCharacter() {
@@ -31,6 +44,10 @@ export class HomePage implements OnInit {
       'blablabla',
       new Abilities(new Ability(14), new Ability(17), new Ability(10), new Ability(12), new Ability(10), new Ability(10)),
       null, null, null, null, null, null, null)});
+  }
+
+  public goToCharacter(character: Character) {
+    this.nav.push(CharacterSheetComponent, { character: character});
   }
 
 }

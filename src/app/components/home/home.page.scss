@@ -1,1 +1,13 @@
+@import "../../../theme/variables.scss";
 
+ion-header {
+    ion-title {
+        font-family: $app-main-font;
+        font-size: 2em;
+        font-weight: bold;
+    }
+}
+
+ion-content {
+    font-family: $app-main-font;
+}

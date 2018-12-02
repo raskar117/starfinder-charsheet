@@ -1,6 +1,6 @@
-<p-accordion class="block-accordion">
+<p-accordion class="block-accordion accordion-char-info">
   <p-accordionTab [selected]="'true'" [header]="'CHARACTER.BLOCK.INFORMATION.TITLE' | translate">
-    <ion-grid>
+    <ion-grid *ngIf="editMode">
       <ion-row>
         <ion-col>
           <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.CLASS' | translate" [value]="character.information.classType"></app-input-text>
@@ -35,6 +35,52 @@
         </ion-col>
         <ion-col>
           <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.PLAYER' | translate" [value]="character.information.playerName"></app-input-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="readonly-grid" *ngIf="!editMode">
+      <ion-row>
+        <ion-col>
+          <ion-row>
+            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.CLASS' | translate}}:</span>
+            <span class="value">&nbsp;{{character.information.classType}}</span>
+          </ion-row>
+          <ion-row>
+            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.RACE' | translate}}:</span>
+            <span class="value">&nbsp;{{character.information.race}}</span>
+          </ion-row>
+          <ion-row>
+            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.THEME' | translate}}:</span>
+            <span class="value">&nbsp;{{character.information.theme}}</span>
+          </ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.SIZE' | translate}}:</span>
+            <span class="value">&nbsp;{{character.information.size}}</span>
+          </ion-row>
+          <ion-row>
+            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.SPEED' | translate}}:</span>
+            <span class="value">&nbsp;{{character.information.speed}}</span>
+          </ion-row>
+          <ion-row>
+            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.GENDER' | translate}}:</span>
+            <span class="value">&nbsp;{{character.information.gender}}</span>
+          </ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.HOMEWORLD' | translate}}:</span>
+            <span class="value">&nbsp;{{character.information.homeWorld}}</span>
+          </ion-row>
+          <ion-row>
+            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.ALIGNMENT' | translate}}:</span>
+            <span class="value">&nbsp;{{character.information.alignment}}</span>
+          </ion-row>
+          <ion-row>
+            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.DEITY' | translate}}:</span>
+            <span class="value">&nbsp;{{character.information.deity}}</span>
+          </ion-row>
         </ion-col>
       </ion-row>
     </ion-grid>

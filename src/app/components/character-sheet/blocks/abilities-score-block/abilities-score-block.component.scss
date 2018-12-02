@@ -9,16 +9,16 @@
     text-align: center;
     border-bottom: 1px solid black;
     .short-label {
-      font-size: 14px;
+      font-size: 18px;
       margin-top: 0;
-      padding-top: 3px;
+      padding-top: 2px;
       margin-bottom: 10px;
       font-weight: bold;
     }
     .long-label {
       font-size: 10px;
       position: absolute;
-      top: 17px;
+      top: 19px;
       left: 0px;
       width: 100%;
       text-overflow: ellipsis;
@@ -28,8 +28,32 @@
   }
   ion-card-content {
     font-family: $app-main-font;
-    font-size: 16px;
     padding: 0;
     text-align: center;
+    h2 {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+    /deep/ .ui-spinner {
+      width: 100%;
+      .ui-spinner-input {
+        padding: 3px 12px 3px 5px;
+        font-family: $app-main-font;
+        height: 30px;
+        width: 100%;
+        border: none;
+        font-size: 20px;
+      }
+      .ui-spinner-button {
+        width: 12px;
+        font-size: 10px;
+        background: transparent;
+        color: black;
+        border: none;
+      }
+    }
+    label {
+      font-size: 0.6em;
+    }
   }
 }

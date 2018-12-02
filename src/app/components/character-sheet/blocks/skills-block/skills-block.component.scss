@@ -32,7 +32,10 @@
       /deep/ .ui-spinner {
         width: 38px;
         .ui-spinner-input {
-          padding: 3px 12px 3px 5px;
+          padding: 3px 16px 3px 0px;
+          text-align: right;
+          font-family: $app-main-font;
+          border-color: $app-main-border-color;
           height: 28px;
           width: 100%;
         }
@@ -46,6 +49,7 @@
       }
       .skill-total {
         height: 28px;
+        line-height: 28px;
         border: 1px solid black;
         border-radius: 3px;
       }

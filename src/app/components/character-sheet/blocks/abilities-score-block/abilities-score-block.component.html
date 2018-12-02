@@ -9,7 +9,12 @@
               <span class="long-label">{{ 'CHARACTER.ABILITY.' + ability.key | translate }}</span>
             </ion-card-header>
             <ion-card-content>
-              <h2>{{ ability.value.score }} (+{{ability.value.modifier}})</h2>
+              <ng-container *ngIf="!editMode">
+                <h2>+{{ ability.value.modifier }}</h2>
+              </ng-container>
+              <ng-container *ngIf="editMode">
+                <p-spinner size="1" [maxlength]="2" [max]="100" [(ngModel)]="ability.value.score"></p-spinner>
+              </ng-container>
             </ion-card-content>
           </ion-card>
         </ion-col>
