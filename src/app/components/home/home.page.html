@@ -9,18 +9,38 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-button [size]="'large'" (click)="createNewCharacter()">
-    <ion-icon name="add-circle-outline"></ion-icon>
-    Create
-  </ion-button>
-  <h5>My Characters :</h5>
-  <ion-card *ngFor="let char of charactersList" (click)="goToCharacter(char)">
-    <ion-card-header>
-      {{char?.information?.name}}
-    </ion-card-header>
-    <ion-card-content>
-      ID : {{char?.id}}
-    </ion-card-content>
-  </ion-card>
+<ion-content>
+  <div class="home-content">
+    <div class="buttons-container">
+      <ion-button fill="clear" [size]="'large'" (click)="createNewCharacter()">
+        <ion-icon name="add"></ion-icon>
+        New
+      </ion-button>
+    </div>
+    <h5>My Characters :</h5>
+    <div class="characters-container">
+      <ion-card class="character-card" *ngFor="let char of charactersList" (click)="goToCharacter(char)">
+        <ion-card-header>
+          {{char?.information?.name}}
+          <div class="level-value">{{char?.information?.level}}</div>
+        </ion-card-header>
+        <ion-card-content>
+          <div class="row">
+            <ion-icon name="ios-body"></ion-icon>{{char?.information?.race}}
+          </div>
+          <div class="row">
+            <ion-icon name="school"></ion-icon>{{char?.information?.classType}}
+          </div>
+          <div class="footer">
+            <ion-button fill="clear" size="small" (click)="createNewCharacter()">
+              <ion-icon name="create"></ion-icon>
+            </ion-button>
+            <ion-button fill="clear" size="small" (click)="createNewCharacter()">
+              <ion-icon name="trash"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
 </ion-content>

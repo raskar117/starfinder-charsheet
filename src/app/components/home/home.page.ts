@@ -29,6 +29,15 @@ export class HomePage implements OnInit {
     this.charactersList = new Array<Character>();
     this.characterService.getCharacters().subscribe((characters: Array<Character>) => {
       this.charactersList = characters;
+      this.charactersList.push(characters[0]);
+      this.charactersList.push(characters[0]);
+      this.charactersList.push(characters[0]);
+      this.charactersList.push(characters[0]);
+      this.charactersList.push(characters[0]);
+      this.charactersList.push(characters[0]);
+      this.charactersList.push(characters[0]);
+      this.charactersList.push(characters[0]);
+      console.log(this.charactersList);
       if (this.charactersList.length === 0) {
         this.charactersList.push(new Character(null,
           new CharacterInformation('', null, 1, null, null, null, null, null, '', null, null, ''), '',

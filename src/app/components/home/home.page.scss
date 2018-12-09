@@ -9,5 +9,75 @@ ion-header {
 }
 
 ion-content {
-    font-family: $app-main-font;
+    .home-content {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        font-family: $app-main-font;
+        color: $app-white;
+        background-image: url('../../../assets/images/homepage.png');
+        .buttons-container {
+            ion-button {
+                font-family: $app-main-font;
+                color: $app-white;
+                border-radius: 6px;
+                box-shadow: 0px 0px 10px 1px $app-white;
+            }
+        }
+        .characters-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-height: calc(100% - 115px);
+            overflow-y: auto;
+            .character-card {
+                flex: 1 1 auto;
+                font-family: $app-main-font;
+                margin: 0;
+                margin-bottom: 15px;
+                min-width: 120px;
+                max-width: 50%;
+                &:nth-child(2n) {
+                    margin-left: 15px;
+                }
+                ion-card-header {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 1.6em;
+                    font-weight: bold;
+                    background-color: $app-dark-slate-blue;
+                    color: $app-white;
+                    text-shadow: 1px 1px 1px $app-dark-slate-gray;
+                    padding: 5px 10px;
+                    .level-value {
+                        background-color: $app-orange;
+                        width: 32px;
+                        height: 32px;
+                        text-align: center;
+                        border-radius: 50%
+                    }
+                }
+                ion-card-content {
+                    padding: 5px 10px;
+                    color: $app-white;
+                    font-weight: bold;
+                    background-color: $app-dark-midnight-blue;
+                    .row {
+                        margin-bottom: 3px;
+                        ion-icon {
+                            padding-right: 5px;
+                        }
+                    }
+                    .footer {
+                        border-top: 1px solid $app-white;
+                        display: flex;
+                        justify-content: space-around;
+                        ion-button {
+                            color: $app-white;
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
