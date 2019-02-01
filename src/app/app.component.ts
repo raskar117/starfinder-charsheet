@@ -4,9 +4,9 @@ import { Platform, Config, Nav } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { HomePage } from './components/home/home.page';
-import { CharacterSheetComponent } from './components/character-sheet/character-sheet.component';
 import { TranslateService } from '@ngx-translate/core';
 import { ViewController } from '@ionic/core';
+import { MyCharactersComponent } from './components/my-characters/my-characters.component';
 
 @Component({
   selector: 'app-root',
@@ -23,8 +23,8 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'Character',
-      component: CharacterSheetComponent,
+      title: 'My characters',
+      component: MyCharactersComponent,
       icon: 'people'
     }
   ];

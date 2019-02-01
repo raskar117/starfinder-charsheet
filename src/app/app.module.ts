@@ -15,6 +15,7 @@ import { CharacterSheetModule } from './components/character-sheet/character-she
 import { HomePageModule } from './components/home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IonicStorageModule } from '@ionic/storage';
+import { MyCharactersModule } from './components/my-characters/my-characters.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -35,10 +36,13 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    IonicModule.forRoot(),
+    IonicModule.forRoot({
+      animated: true
+    }),
     IonicStorageModule.forRoot(),
     RouterModule.forRoot([]),
     HomePageModule,
+    MyCharactersModule,
     CharacterSheetModule
   ],
   providers: [

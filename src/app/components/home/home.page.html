@@ -1,46 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <div class="home-content">
+    <div class="header-title">
+      <span>{{ 'APP.TITLE' | translate }}</span>
+    </div>
     <div class="buttons-container">
       <ion-button fill="clear" [size]="'large'" (click)="createNewCharacter()">
         <ion-icon name="add"></ion-icon>
-        New
+        {{ 'HOME.BUTTONS.NEW_CHARACTER' | translate }}
       </ion-button>
-    </div>
-    <h5>My Characters :</h5>
-    <div class="characters-container">
-      <ion-card class="character-card" *ngFor="let char of charactersList" (click)="goToCharacter(char)">
-        <ion-card-header>
-          {{char?.information?.name}}
-          <div class="level-value">{{char?.information?.level}}</div>
-        </ion-card-header>
-        <ion-card-content>
-          <div class="row">
-            <ion-icon name="ios-body"></ion-icon>{{char?.information?.race}}
-          </div>
-          <div class="row">
-            <ion-icon name="school"></ion-icon>{{char?.information?.classType}}
-          </div>
-          <div class="footer">
-            <ion-button fill="clear" size="small" (click)="createNewCharacter()">
-              <ion-icon name="create"></ion-icon>
-            </ion-button>
-            <ion-button fill="clear" size="small" (click)="createNewCharacter()">
-              <ion-icon name="trash"></ion-icon>
-            </ion-button>
-          </div>
-        </ion-card-content>
-      </ion-card>
+      <ion-button *ngIf="charactersList?.length > 0" fill="clear" [size]="'large'" (click)="goToMyCharacters()">
+        <ion-icon name="people"></ion-icon>
+        {{ 'HOME.BUTTONS.MY_CHARACTERS' | translate }}
+      </ion-button>
     </div>
   </div>
 </ion-content>

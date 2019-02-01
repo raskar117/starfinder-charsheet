@@ -10,6 +10,7 @@ import { Gender } from '../../enums/gender.enum';
 import { Abilities } from '../../models/character-blocks/abilities.model';
 import { Ability } from '../../models/character-blocks/ability.model';
 import { CharacterService } from '../../services/character.service';
+import { MyCharactersComponent } from '../my-characters/my-characters.component';
 
 @Component({
   selector: 'app-home',
@@ -30,20 +31,6 @@ export class HomePage implements OnInit {
     this.characterService.getCharacters().subscribe((characters: Array<Character>) => {
       this.charactersList = characters;
       this.charactersList.push(characters[0]);
-      this.charactersList.push(characters[0]);
-      this.charactersList.push(characters[0]);
-      this.charactersList.push(characters[0]);
-      this.charactersList.push(characters[0]);
-      this.charactersList.push(characters[0]);
-      this.charactersList.push(characters[0]);
-      this.charactersList.push(characters[0]);
-      console.log(this.charactersList);
-      if (this.charactersList.length === 0) {
-        this.charactersList.push(new Character(null,
-          new CharacterInformation('', null, 1, null, null, null, null, null, '', null, null, ''), '',
-          new Abilities(new Ability(0), new Ability(0), new Ability(0), new Ability(0), new Ability(0), new Ability(0)),
-          null, null, null, null, null, null, null));
-      }
     });
   }
 
@@ -55,8 +42,8 @@ export class HomePage implements OnInit {
       null, null, null, null, null, null, null)});
   }
 
-  public goToCharacter(character: Character) {
-    this.nav.push(CharacterSheetComponent, { character: character});
+  public goToMyCharacters() {
+    this.nav.push(MyCharactersComponent);
   }
 
 }

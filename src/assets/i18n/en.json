@@ -1,4 +1,13 @@
 {
+  "APP": {
+    "TITLE": "Starfinder Character Sheet"
+  },
+  "HOME": {
+    "BUTTONS": {
+      "NEW_CHARACTER": "New character",
+      "MY_CHARACTERS": "My characters"
+    }
+  },
   "CHARACTER": {
     "LEVEL" : {
       "TITLE": "Level"
