@@ -2,12 +2,12 @@
 
 .card-ability {
   margin: 0;
-  border: 1px solid black;
   ion-card-header {
     font-family: $app-main-font;
     padding: 0;
+    height: 33px;
     text-align: center;
-    border-bottom: 1px solid black;
+    background-color: $app-platinum;
     .short-label {
       font-size: 18px;
       margin-top: 0;
@@ -30,6 +30,7 @@
     font-family: $app-main-font;
     padding: 0;
     text-align: center;
+    margin-top: -2px; 
     h2 {
       font-size: 20px;
       margin-bottom: 0;

@@ -80,19 +80,28 @@
 
 $app-main-font: 'Coda', cursive;
 
-$app-main-border-color: black;
+$app-main-border-color: #000505;
 $app-input-value-color: blue;
 
 $app-white: white;
+$app-white-snow: #FBFBFC;
+$app-platinum: #eaeaea;
+$app-ultra-light-gray: #f7f7f7;
+$app-light-gray: #C8C8C8;
 $app-dark-midnight-blue: #0c1523;
 $app-dark-midnight-blue-transparent: rgba(12, 21, 35, 0.6);
 $app-midnight-blue: #0f5078;
+$app-midnight-blue-two: #18314F;
 $app-dark-slate-blue: #405c78;
+$app-dark-coral: #4F5D75;
 $app-firebrick-red: #c43621;
 $app-orange: #e36d2f;
+$app-sunrise-yellow: #FE9920;
 $app-turquoise: #4fcfea;
 $app-turquoise-two: #39b7eb;
+$app-dark-turquoise: #048BA8;
 $app-dark-slate-gray: #211f27;
+$app-midnight-purple: #0D0630;
 
 $app-background-gradient-blue: -moz-linear-gradient(top, rgba(30,87,153,0) 0%, rgba(30,87,153,0.8) 15%, rgba(30,87,153,1) 19%, rgba(30,87,153,1) 20%, rgba(41,137,216,1) 50%, rgba(30,87,153,1) 80%, rgba(30,87,153,1) 81%, rgba(30,87,153,0.8) 85%, rgba(30,87,153,0) 100%); /* FF3.6-15 */
 $app-background-gradient-blue: -webkit-linear-gradient(top, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%); /* Chrome10-25,Safari5.1-6 */

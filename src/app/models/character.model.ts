@@ -5,13 +5,14 @@ import { Skill } from './character-blocks/skill.model';
 import { Profession } from './character-blocks/profession.model';
 import { HealthResolve, HealthResolvePoints } from './character-blocks/health-resolve.model';
 import { StorageEntity } from './storage-entity.model';
+import { Initiative } from './character-blocks/initiative.model';
 
 export class Character extends StorageEntity {
     public information: CharacterInformation;
     public description: string;
     public abilities: Abilities;
     public skills: Skills;
-    public initiative: any;
+    public initiative: Initiative;
     public healthResolve: HealthResolve;
     public armorClass: any;
     public savingThrows: any;
@@ -20,7 +21,7 @@ export class Character extends StorageEntity {
 
 
     constructor(id: number, information: CharacterInformation, description: string, abilities: Abilities, skills: Skills,
-        initiative: any, healthResolve: HealthResolve, armorClass: any, savingThrows: any, attackBonuses: any, weapons: Array<any>
+        initiative: Initiative, healthResolve: HealthResolve, armorClass: any, savingThrows: any, attackBonuses: any, weapons: Array<any>
     ) {
         super(id);
         this.information = information;

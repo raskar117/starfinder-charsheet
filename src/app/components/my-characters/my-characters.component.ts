@@ -3,6 +3,11 @@ import { Nav } from '@ionic/angular';
 import { Character } from '../../models/character.model';
 import { CharacterSheetComponent } from '../character-sheet/character-sheet.component';
 import { CharacterService } from '../../services/character.service';
+import { Abilities } from '../../models/character-blocks/abilities.model';
+import { Ability } from '../../models/character-blocks/ability.model';
+import { Skills } from '../../models/character-blocks/skills.model';
+import { Initiative } from '../../models/character-blocks/initiative.model';
+import { HealthResolve } from '../../models/character-blocks/health-resolve.model';
 
 @Component({
   selector: 'app-my-characters',
@@ -20,14 +25,6 @@ export class MyCharactersComponent implements OnInit {
   ngOnInit() {
     this.characterService.getCharacters().subscribe((characters: Array<Character>) => {
       this.charactersList = characters;
-      this.charactersList.push(characters[0]);
-      this.charactersList.push(characters[0]);
-      this.charactersList.push(characters[0]);
-      this.charactersList.push(characters[0]);
-      this.charactersList.push(characters[0]);
-      this.charactersList.push(characters[0]);
-      this.charactersList.push(characters[0]);
-      this.charactersList.push(characters[0]);
     });
   }
 
@@ -42,6 +39,9 @@ export class MyCharactersComponent implements OnInit {
 
   public deleteCharacter(event: MouseEvent, character: Character) {
     event.stopPropagation();
+    this.characterService.deleteCharacter(character.id).subscribe(() => {
+      this.charactersList.splice(this.charactersList.findIndex(ent => ent.id === character.id), 1);
+    });
     // TO-DO
   }
 

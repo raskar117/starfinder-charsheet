@@ -27,25 +27,29 @@ export class Skills {
         diplomacy: Skill, disguise: Skill, engineering: Skill, intimidate: Skill, lifeScience: Skill,
         medicine: Skill, mysticism: Skill, perception: Skill, physicalScience: Skill, piloting: Skill,
         professions: Array<Profession>, senseMotive: Skill, sleightOfHand: Skill, stealth: Skill, survival: Skill) {
-        this.acrobatics = acrobatics;
-        this.athletics = athletics;
-        this.bluff = bluff;
-        this.computers = computers;
-        this.culture = culture;
-        this.diplomacy = diplomacy;
-        this.disguise = disguise;
-        this.engineering = engineering;
-        this.intimidate = intimidate;
-        this.lifeScience = lifeScience;
-        this.medicine = medicine;
-        this.mysticism = mysticism;
-        this.perception = perception;
-        this.physicalScience = physicalScience;
-        this.piloting = piloting;
-        this.professions = professions;
-        this.senseMotive = senseMotive;
-        this.sleightOfHand = sleightOfHand;
-        this.stealth = stealth;
-        this.survival = survival;
+        this.acrobatics = this.newSkillFromSkill(acrobatics);
+        this.athletics = this.newSkillFromSkill(athletics);
+        this.bluff = this.newSkillFromSkill(bluff);
+        this.computers = this.newSkillFromSkill(computers);
+        this.culture = this.newSkillFromSkill(culture);
+        this.diplomacy = this.newSkillFromSkill(diplomacy);
+        this.disguise = this.newSkillFromSkill(disguise);
+        this.engineering = this.newSkillFromSkill(engineering);
+        this.intimidate = this.newSkillFromSkill(intimidate);
+        this.lifeScience = this.newSkillFromSkill(lifeScience);
+        this.medicine = this.newSkillFromSkill(medicine);
+        this.mysticism = this.newSkillFromSkill(mysticism);
+        this.perception = this.newSkillFromSkill(perception);
+        this.physicalScience = this.newSkillFromSkill(physicalScience);
+        this.piloting = this.newSkillFromSkill(piloting);
+        this.professions = professions ? professions.map(prof => new Profession(prof.displayName, this.newSkillFromSkill(prof.skill))) : null;
+        this.senseMotive = this.newSkillFromSkill(senseMotive);
+        this.sleightOfHand = this.newSkillFromSkill(sleightOfHand);
+        this.stealth = this.newSkillFromSkill(stealth);
+        this.survival = this.newSkillFromSkill(survival);
+    }
+
+    private newSkillFromSkill(skill: Skill) {
+        return new Skill(skill.ranks, skill.classBonus, skill.abilityModifier, skill.miscModifier);
     }
 }

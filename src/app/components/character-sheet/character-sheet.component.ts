@@ -28,7 +28,6 @@ export class CharacterSheetComponent implements OnInit {
 
   public saveCharacter() {
     this.characterService.saveCharacter(this.character).subscribe((id) => {
-      console.log('character saved : ' + id);
       this.editMode = false;
     });
   }

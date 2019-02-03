@@ -9,12 +9,12 @@ export class Abilities {
     public charisma: Ability;
 
     constructor(strength: Ability, dexterity: Ability, constitution: Ability, intelligence: Ability, wisdom: Ability, charisma: Ability) {
-        this.strength = strength;
-        this.dexterity = dexterity;
-        this.constitution = constitution;
-        this.intelligence = intelligence;
-        this.wisdom = wisdom;
-        this.charisma = charisma;
+        this.strength = new Ability(strength.score);
+        this.dexterity = new Ability(dexterity.score);
+        this.constitution = new Ability(constitution.score);
+        this.intelligence = new Ability(intelligence.score);
+        this.wisdom = new Ability(wisdom.score);
+        this.charisma = new Ability(charisma.score);
     }
 
 }

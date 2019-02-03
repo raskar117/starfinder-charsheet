@@ -11,6 +11,7 @@ import { Abilities } from '../../models/character-blocks/abilities.model';
 import { Ability } from '../../models/character-blocks/ability.model';
 import { CharacterService } from '../../services/character.service';
 import { MyCharactersComponent } from '../my-characters/my-characters.component';
+import { Initiative } from '../../models/character-blocks/initiative.model';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +24,7 @@ export class HomePage implements OnInit {
   constructor(
     private nav: Nav,
     private characterService: CharacterService,
-  ) {}
+  ) { }
 
   ngOnInit() {
     // this.createNewCharacter();
@@ -35,11 +36,22 @@ export class HomePage implements OnInit {
   }
 
   public createNewCharacter() {
-    this.nav.push(CharacterSheetComponent, { character: new Character(null,
-      new CharacterInformation('Elliad', ClassType.OPERATIVE, 2, RaceType.KASATHAS, Theme.OUTLAW, 170, 30, Gender.MALE, 'test', null, null, 'Vincent'),
-      'blablabla',
-      new Abilities(new Ability(14), new Ability(17), new Ability(10), new Ability(12), new Ability(10), new Ability(10)),
-      null, null, null, null, null, null, null)});
+    this.nav.push(CharacterSheetComponent, {
+      character: new Character(
+        null,
+        new CharacterInformation('Elliad', ClassType.OPERATIVE, 2, RaceType.KASATHAS, Theme.OUTLAW, 170, 30, Gender.MALE, 'test', null, null, 'Vincent'),
+        'blablabla',
+        new Abilities(new Ability(14), new Ability(17), new Ability(10), new Ability(12), new Ability(10), new Ability(10)),
+        null,
+        new Initiative(null, null),
+        null,
+        null,
+        null,
+        null,
+        null
+      ),
+      editMode: true
+    });
   }
 
   public goToMyCharacters() {

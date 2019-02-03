@@ -1,4 +1,3 @@
-import { Ability } from './../../../../models/character-blocks/ability.model';
 import { Component, OnInit } from '@angular/core';
 import { BlockComponent } from '../block-component';
 
@@ -9,17 +8,17 @@ import { BlockComponent } from '../block-component';
 })
 export class AbilitiesScoreBlockComponent extends BlockComponent implements OnInit {
 
-  public abilitiesList: Map<string, Ability>;
+  public abilitiesKeys: Array<string>;
 
   constructor() {
     super();
   }
 
   ngOnInit() {
-    this.abilitiesList = new Map<string, Ability>();
+    this.abilitiesKeys = new Array<string>();
     if (this.character.abilities) {
       Object.keys(this.character.abilities).map((a) => {
-        this.abilitiesList.set(a.toUpperCase(), this.character.abilities[a]);
+        this.abilitiesKeys.push(a);
       });
     }
   }
