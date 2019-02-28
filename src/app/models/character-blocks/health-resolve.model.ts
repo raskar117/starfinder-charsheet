@@ -14,8 +14,8 @@ export class HealthResolve {
     resolve: HealthResolvePoints;
 
     constructor(stamina: HealthResolvePoints, hit: HealthResolvePoints, resolve: HealthResolvePoints) {
-        this.stamina = stamina;
-        this.hit = hit;
-        this.resolve = resolve;
+        this.stamina = stamina ? new HealthResolvePoints(stamina.current, stamina.total) : new HealthResolvePoints(0, 0);
+        this.hit = hit ? new HealthResolvePoints(hit.current, hit.total) : new HealthResolvePoints(0, 0);
+        this.resolve = resolve ? new HealthResolvePoints(resolve.current, resolve.total) : new HealthResolvePoints(0, 0);
     }
 }

@@ -16,6 +16,7 @@ import { SkillsBlockComponent } from './blocks/skills-block/skills-block.compone
 import { HealthResolveBlockComponent } from './blocks/health-resolve-block/health-resolve-block.component';
 import { FormsModule } from '@angular/forms';
 import { CharacterService } from '../../services/character.service';
+import { CharsheetInputCounterComponent } from './widgets/charsheet-input-counter/charsheet-input-counter.component';
 
 @NgModule({
   entryComponents: [CharacterSheetComponent],
@@ -33,6 +34,7 @@ import { CharacterService } from '../../services/character.service';
   declarations: [
     CharacterSheetComponent,
     CharsheetInputTextComponent,
+    CharsheetInputCounterComponent,
     CharInfoBlockComponent,
     DescriptionBlockComponent,
     AbilitiesScoreBlockComponent,

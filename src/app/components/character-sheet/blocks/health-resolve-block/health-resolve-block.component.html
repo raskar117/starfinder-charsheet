@@ -1,14 +1,17 @@
 <div class="health-resolve-container">
-  <div class="health-resolve-points">
-    <h6 class="points">{{ character.healthResolve.stamina.current }} / {{ character.healthResolve.stamina.total }}</h6>
-    <span class="label">{{ 'CHARACTER.BLOCK.HEALTH_RESOLVE.STAMINA' | translate }}</span>
-  </div>
-  <div class="health-resolve-points">
-    <h6 class="points">{{ character.healthResolve.hit.current }} / {{ character.healthResolve.hit.total }}</h6>
-    <span class="label">{{ 'CHARACTER.BLOCK.HEALTH_RESOLVE.HIT' | translate }}</span>
-  </div>
-  <div class="health-resolve-points">
-    <h6 class="points">{{ character.healthResolve.resolve.current }} / {{ character.healthResolve.resolve.total }}</h6>
-    <span class="label">{{ 'CHARACTER.BLOCK.HEALTH_RESOLVE.RESOLVE' | translate }}</span>
-  </div>
+  <app-input-counter [editMode]="editMode"
+    [(currentValue)]="character.healthResolve.stamina.current"
+    [(total)]="character.healthResolve.stamina.total"
+    [placeholder]="'CHARACTER.BLOCK.HEALTH_RESOLVE.STAMINA' | translate">
+  </app-input-counter>
+  <app-input-counter [editMode]="editMode"
+    [(currentValue)]="character.healthResolve.hit.current"
+    [(total)]="character.healthResolve.hit.total"
+    [placeholder]="'CHARACTER.BLOCK.HEALTH_RESOLVE.HIT' | translate">
+  </app-input-counter>
+  <app-input-counter [editMode]="editMode"
+    [(currentValue)]="character.healthResolve.resolve.current"
+    [(total)]="character.healthResolve.resolve.total"
+    [placeholder]="'CHARACTER.BLOCK.HEALTH_RESOLVE.RESOLVE' | translate">
+  </app-input-counter>
 </div>

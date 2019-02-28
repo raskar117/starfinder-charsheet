@@ -39,6 +39,10 @@ ion-content {
                 ion-icon {
                     margin-right: 10px;
                 }
+                &:focus, &:active, &:hover {
+                    background-color: $app-white;
+                    color: $app-dark-midnight-blue !important;
+                }
             }
         }
     }

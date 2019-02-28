@@ -1,5 +1,5 @@
 import { Nav, NavParams } from '@ionic/angular';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Character } from '../../models/character.model';
 import { CharacterService } from '../../services/character.service';
 
@@ -8,18 +8,23 @@ import { CharacterService } from '../../services/character.service';
   templateUrl: './character-sheet.component.html',
   styleUrls: ['./character-sheet.component.scss']
 })
-export class CharacterSheetComponent implements OnInit {
+export class CharacterSheetComponent implements OnInit, OnDestroy {
 
   public character: Character;
   public editMode: boolean;
+  public show: boolean;
 
   constructor(
-    private nav: NavParams,
+    private nav: Nav,
     private characterService: CharacterService
   ) { }
 
   ngOnInit() {
-    console.log('char : ', this.character);
+    this.show = true;
+  }
+
+  ngOnDestroy() {
+    this.saveCharacter();
   }
 
   public activateEditMode() {

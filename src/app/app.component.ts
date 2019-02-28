@@ -49,6 +49,6 @@ export class AppComponent {
   }
 
   goTo(comp: ViewController) {
-    this.nav.push(comp);
+    this.nav.setRoot(comp);
   }
 }

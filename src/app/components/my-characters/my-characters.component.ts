@@ -3,11 +3,6 @@ import { Nav } from '@ionic/angular';
 import { Character } from '../../models/character.model';
 import { CharacterSheetComponent } from '../character-sheet/character-sheet.component';
 import { CharacterService } from '../../services/character.service';
-import { Abilities } from '../../models/character-blocks/abilities.model';
-import { Ability } from '../../models/character-blocks/ability.model';
-import { Skills } from '../../models/character-blocks/skills.model';
-import { Initiative } from '../../models/character-blocks/initiative.model';
-import { HealthResolve } from '../../models/character-blocks/health-resolve.model';
 
 @Component({
   selector: 'app-my-characters',

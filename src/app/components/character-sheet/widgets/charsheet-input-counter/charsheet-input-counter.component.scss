@@ -1,0 +1,31 @@
+@import "../../../../../theme/variables.scss";
+
+.counter {
+    font-family: $app-main-font;
+    text-align: center;
+    line-height: 10px;
+    .points {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        h6 {
+            color: $app-white;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0;
+            padding: 0 4px;
+        }
+        .modifier-button {
+            color: $app-white;
+            background: none;
+            font-weight: bold;
+            border-radius: 4px;
+            width: 10px;
+            padding: 0;
+        }
+    }
+    .label {
+        color: $app-white;
+        font-size: 10px;
+    }
+}
