@@ -40,16 +40,33 @@
     }
 }
 
-.character-blocks-container {
+.character-sheet-container {
+    max-height: calc(100% - 64px);
+    margin-bottom: 52px;
+    width: 100%;
+    overflow: auto;
     overflow-y: auto;
     overflow-x: hidden;
-    height: 100%;
-    width: 100%;
+    padding: 0 4px;
+    background-color: white;
     background-color: $app-white;
-    .health-resolve-row ion-col {
+    .character-blocks-container {
+        height: 100%;
+        width: 100%;
         padding: 0;
+    }
+    .health-resolve-row {
         top: -5px;
     }
+}
+
+.tabs-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 52px;
+    z-index: 1000000;
 }
 
 /deep/ .block-accordion {
@@ -59,6 +76,7 @@
             a {
                 font-family: $app-main-font;
                 color: $app-white;
+                text-align: left;
                 text-shadow: 1px 1px 1px $app-dark-slate-gray;
                 padding: 5px;
                 width: 140px;
@@ -98,6 +116,8 @@
 }
 
 .bottom-sheet-fab {
+    right: 5px;
+    bottom: 58px;
     .main-button {
         opacity: 0.7;
     }

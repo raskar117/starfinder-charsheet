@@ -1,5 +1,5 @@
-<p-accordion class="block-accordion">
+<p-accordion class="block-accordion accordion-char-description">
   <p-accordionTab [selected]="'true'" [header]="'Description'">
-    {{character.description}}
+    <textarea [value]="character.description" [readOnly]="!editMode"></textarea>
   </p-accordionTab>
 </p-accordion>

@@ -12,6 +12,12 @@
     "LEVEL" : {
       "TITLE": "Level"
     },
+    "SLIDES": {
+      "INFORMATIONS": "Description",
+      "CHARACTERISTICS": "Abilities & Skills",
+      "ARMOR": "Armor",
+      "WEAPONS": "Weapons"
+    },
     "BLOCK": {
       "INFORMATION": {
         "TITLE": "Information",

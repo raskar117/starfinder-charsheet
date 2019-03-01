@@ -1,5 +1,5 @@
-import { Nav, NavParams } from '@ionic/angular';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Nav, Slides } from '@ionic/angular';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { Character } from '../../models/character.model';
 import { CharacterService } from '../../services/character.service';
 
@@ -9,10 +9,12 @@ import { CharacterService } from '../../services/character.service';
   styleUrls: ['./character-sheet.component.scss']
 })
 export class CharacterSheetComponent implements OnInit, OnDestroy {
+  @ViewChild('slidesContainer') slidesContainer: Slides;
 
   public character: Character;
   public editMode: boolean;
   public show: boolean;
+  public activeSlide = 0;
 
   constructor(
     private nav: Nav,
@@ -21,6 +23,11 @@ export class CharacterSheetComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.show = true;
+    this.slidesContainer.ionSlideDidChange.subscribe(() => {
+      this.slidesContainer.getActiveIndex().then((index) => {
+        this.activeSlide = index;
+      });
+    });
   }
 
   ngOnDestroy() {
@@ -35,6 +42,11 @@ export class CharacterSheetComponent implements OnInit, OnDestroy {
     this.characterService.saveCharacter(this.character).subscribe((id) => {
       this.editMode = false;
     });
+  }
+
+  public goToSlide(index: number) {
+    this.activeSlide = index;
+    this.slidesContainer.slideTo(index);
   }
 
 }

@@ -15,34 +15,71 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-grid class="character-blocks-container">
-  <ion-row class="health-resolve-row">
-    <ion-col>
-      <app-health-resolve-block [editMode]="editMode" [character]="character"></app-health-resolve-block>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <app-char-info-block [editMode]="editMode" [character]="character"></app-char-info-block>
-    </ion-col>
-    <!--
-    <ion-col [size]="0" [sizeSm]="4">
-      <app-description-block [character]="character"></app-description-block>
-    </ion-col>
-    -->
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <app-abilities-score-block [editMode]="editMode" [character]="character"></app-abilities-score-block>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col [sizeXs]="12" [sizeSm]="6">
-      <app-skills-block [editMode]="editMode" [character]="character"></app-skills-block>
-    </ion-col>
-    <ion-col></ion-col>
-  </ion-row>
-</ion-grid>
+<div class="character-sheet-container">
+  <div class="health-resolve-row">
+    <app-health-resolve-block [editMode]="editMode" [character]="character"></app-health-resolve-block>
+  </div>
+  <div class="slides-container">
+    <ion-slides #slidesContainer [pager]="false">
+      <ion-slide>
+        <ion-grid class="character-blocks-container">
+          <ion-row>
+            <ion-col>
+              <app-char-info-block [editMode]="editMode" [character]="character"></app-char-info-block>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <app-description-block [editMode]="editMode" [character]="character"></app-description-block>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+      <ion-slide>
+        <ion-grid class="character-blocks-container">
+          <ion-row>
+            <ion-col>
+              <app-abilities-score-block [editMode]="editMode" [character]="character"></app-abilities-score-block>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col [sizeXs]="12" [sizeSm]="6">
+              <app-skills-block [editMode]="editMode" [character]="character"></app-skills-block>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+      <ion-slide>
+        <h1>{{ 'CHARACTER.SLIDES.ARMOR' | translate }}</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>{{ 'CHARACTER.SLIDES.WEAPONS' | translate }}</h1>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</div>
+<div class="tabs-container">
+  <ion-tab-bar slot="bottom" [selectedTab]="activeSlide">
+    <ion-tab-button [tab]="0" (click)="goToSlide(0)">
+      <ion-label>{{ 'CHARACTER.SLIDES.INFORMATIONS' | translate }}</ion-label>
+      <ion-icon name="contact"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button [tab]="1" (click)="goToSlide(1)">
+      <ion-label>{{ 'CHARACTER.SLIDES.CHARACTERISTICS' | translate }}</ion-label>
+      <ion-icon name="book"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button [tab]="2" (click)="goToSlide(2)">
+      <ion-label>{{ 'CHARACTER.SLIDES.ARMOR' | translate }}</ion-label>
+      <ion-icon name="body"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button [tab]="3" (click)="goToSlide(3)">
+      <ion-label>{{ 'CHARACTER.SLIDES.WEAPONS' | translate }}</ion-label>
+      <ion-icon name="flash"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</div>
+
 
 <ion-fab *ngIf="!editMode" class="bottom-sheet-fab" vertical="bottom" horizontal="end">
   <ion-fab-button color="primary" class="main-button">

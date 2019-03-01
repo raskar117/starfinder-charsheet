@@ -60,6 +60,14 @@ ion-content {
                     }
                 }
             }
+            &:active {
+                ion-card-header {
+                    background-color: $app-turquoise;
+                }
+                ion-card-content {
+                    background-color: $app-midnight-blue;
+                }
+            }
         }
     }
 }
