@@ -1,0 +1,75 @@
+<p-accordion class="block-accordion accordion-char-armor-class">
+    <p-accordionTab [selected]="'true'" [header]="'CHARACTER.BLOCK.ARMOR_CLASS.TITLE' | translate">
+        <ng-container *ngIf="!editMode">
+            <div class="armor-container">
+                <svg-icon src="assets/icon/armor.svg"></svg-icon>
+                <div class="eac-block">
+                    <div class="armor-class-label">
+                        <span
+                            class="short-label">{{'CHARACTER.BLOCK.ARMOR_CLASS.ENERGY_ARMOR_CLASS.SHORT_TEXT' | translate}}</span><br>
+                        <span
+                            class="full-label">{{'CHARACTER.BLOCK.ARMOR_CLASS.ENERGY_ARMOR_CLASS.FULL_TEXT' | translate}}</span>
+                    </div>
+                    <div class="armor-class-value">{{character?.armorClass?.energyArmorClass.getTotal(character?.abilities?.dexterity.modifier)}}</div>
+                </div>
+                <div class="kac-block">
+                    <div class="armor-class-label">
+                        <span
+                            class="short-label">{{'CHARACTER.BLOCK.ARMOR_CLASS.KINETIC_ARMOR_CLASS.SHORT_TEXT' | translate}}</span><br>
+                        <span
+                            class="full-label">{{'CHARACTER.BLOCK.ARMOR_CLASS.KINETIC_ARMOR_CLASS.FULL_TEXT' | translate}}</span>
+                    </div>
+                    <div class="armor-class-value">{{character?.armorClass?.kineticArmorClass.getTotal(character?.abilities?.dexterity.modifier)}}</div>
+                </div>
+                <!--
+                    <div class="ac-vs-combat-block">
+                        <span class="armor-class-label">{{'CHARACTER.BLOCK.ARMOR_CLASS.AC_VS_COMBAT' | translate}}</span>
+                        <span class="armor-class-value">{{character?.armorClass.acVsCombatManeuvers}}</span>
+                    </div>
+                -->
+            </div>
+        </ng-container>
+        <ng-container *ngIf="editMode">
+            <div class="armor-class-edit-container">
+                <div class="armor-class-label">
+                    <span
+                        class="short-label">{{'CHARACTER.BLOCK.ARMOR_CLASS.ENERGY_ARMOR_CLASS.SHORT_TEXT' | translate}}</span><br>
+                    <span
+                        class="full-label">{{'CHARACTER.BLOCK.ARMOR_CLASS.ENERGY_ARMOR_CLASS.FULL_TEXT' | translate}}</span>
+                </div>
+                <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.TOTAL' | translate"
+                    [value]="character?.armorClass?.energyArmorClass.getTotal(character.abilities.dexterity.modifier)" [readonly]="true"></app-number-block>
+                <div class="number-block-separator"> = 10 + </div>
+                <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.ARMOR_BONUS' | translate"
+                    [(value)]="character?.armorClass?.energyArmorClass.armorBonus"></app-number-block>
+                <div class="number-block-separator"> + </div>
+                <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.DEX_MODIFIER' | translate"
+                    [(value)]="character?.abilities?.dexterity.modifier" [readonly]="true">
+                </app-number-block>
+                <div class="number-block-separator"> + </div>
+                <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.MISC_MODIFIER' | translate"
+                    [(value)]="character?.armorClass?.energyArmorClass.miscModifier"></app-number-block>
+            </div>
+            <div class="armor-class-edit-container">
+                <div class="armor-class-label">
+                    <span
+                        class="short-label">{{'CHARACTER.BLOCK.ARMOR_CLASS.KINETIC_ARMOR_CLASS.SHORT_TEXT' | translate}}</span><br>
+                    <span
+                        class="full-label">{{'CHARACTER.BLOCK.ARMOR_CLASS.KINETIC_ARMOR_CLASS.FULL_TEXT' | translate}}</span>
+                </div>
+                <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.TOTAL' | translate"
+                    [value]="character?.armorClass?.kineticArmorClass.getTotal(character.abilities.dexterity.modifier)" [readonly]="true"></app-number-block>
+                <div class="number-block-separator"> = 10 + </div>
+                <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.ARMOR_BONUS' | translate"
+                    [(value)]="character?.armorClass?.kineticArmorClass.armorBonus"></app-number-block>
+                <div class="number-block-separator"> + </div>
+                <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.DEX_MODIFIER' | translate"
+                    [(value)]="character?.abilities?.dexterity.modifier" [readonly]="true">
+                </app-number-block>
+                <div class="number-block-separator"> + </div>
+                <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.MISC_MODIFIER' | translate"
+                    [(value)]="character?.armorClass?.kineticArmorClass.miscModifier"></app-number-block>
+            </div>
+        </ng-container>
+    </p-accordionTab>
+</p-accordion>

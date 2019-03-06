@@ -48,7 +48,23 @@
         "STAMINA": "Stamina Points",
         "HIT": "Hit Points",
         "RESOLVE": "Resolve Points"
-      } 
+      },
+      "ARMOR_CLASS": {
+        "TITLE": "Armor class",
+        "ENERGY_ARMOR_CLASS": {
+          "SHORT_TEXT": "EAC",
+          "FULL_TEXT": "Energy Armor Class"
+        },
+        "KINETIC_ARMOR_CLASS": {
+          "SHORT_TEXT": "KAC",
+          "FULL_TEXT": "Kinetic Armor Class"
+        },
+        "AC_VS_COMBAT": "AC VS. Combat maneuvers",
+        "TOTAL": "Total",
+        "ARMOR_BONUS": "Armor bonus",
+        "DEX_MODIFIER": "Dex mod",
+        "MISC_MODIFIER": "Misc mod"
+      }
     },
     "ABILITY": {
       "STRENGTH": "Strength",

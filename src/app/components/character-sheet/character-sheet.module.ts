@@ -17,6 +17,10 @@ import { HealthResolveBlockComponent } from './blocks/health-resolve-block/healt
 import { FormsModule } from '@angular/forms';
 import { CharacterService } from '../../services/character.service';
 import { CharsheetInputCounterComponent } from './widgets/charsheet-input-counter/charsheet-input-counter.component';
+import { CharsheetNumberBlockComponent } from './widgets/charsheet-number-block/charsheet-number-block.component';
+import { ArmorClassBlockComponent } from './blocks/armor-class-block/armor-class-block.component';
+import { AttackBonusesBlockComponent } from './blocks/attack-bonuses-block/attack-bonuses-block.component';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 @NgModule({
   entryComponents: [CharacterSheetComponent],
@@ -26,6 +30,7 @@ import { CharsheetInputCounterComponent } from './widgets/charsheet-input-counte
     BrowserAnimationsModule,
     FormsModule,
     IonicModule,
+    AngularSvgIconModule,
     TranslateModule,
     AccordionModule,
     InputTextModule,
@@ -35,9 +40,12 @@ import { CharsheetInputCounterComponent } from './widgets/charsheet-input-counte
     CharacterSheetComponent,
     CharsheetInputTextComponent,
     CharsheetInputCounterComponent,
+    CharsheetNumberBlockComponent,
     CharInfoBlockComponent,
     DescriptionBlockComponent,
     AbilitiesScoreBlockComponent,
+    ArmorClassBlockComponent,
+    AttackBonusesBlockComponent,
     SkillsBlockComponent,
     HealthResolveBlockComponent
   ],

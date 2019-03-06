@@ -9,6 +9,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicModule } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 import { AppComponent } from './app.component';
 import { CharacterSheetModule } from './components/character-sheet/character-sheet.module';
@@ -16,6 +17,7 @@ import { HomePageModule } from './components/home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IonicStorageModule } from '@ionic/storage';
 import { MyCharactersModule } from './components/my-characters/my-characters.module';
+import { SharedServices } from './services/shared-services.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -41,13 +43,15 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     IonicStorageModule.forRoot(),
     RouterModule.forRoot([]),
+    AngularSvgIconModule,
     HomePageModule,
     MyCharactersModule,
     CharacterSheetModule
   ],
   providers: [
     StatusBar,
-    SplashScreen
+    SplashScreen,
+    SharedServices
   ],
   bootstrap: [AppComponent]
 })

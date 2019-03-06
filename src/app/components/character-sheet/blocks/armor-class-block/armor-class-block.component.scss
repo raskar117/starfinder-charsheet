@@ -1,0 +1,79 @@
+@import "../../../../../theme/variables.scss";
+
+.armor-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    svg-icon {
+        height: 100%;
+    width: 100%;
+        /deep/ svg {
+            fill: $app-dark-turquoise;
+            height: 60%;
+            width: 60%;
+        }
+    }
+    .eac-block, .kac-block {
+        font-family: $app-main-font;
+        border: 1px solid $app-dark-turquoise;
+        background-color: $app-white;
+        border-radius: 5px;
+        position: absolute;
+        width: 30%;
+        box-shadow: 0px 0px 0px 1px $app-white;
+        .armor-class-label {
+            background-color: $app-dark-turquoise;
+            color: $app-white;
+            padding-top: 5px;
+            padding-bottom: 2px;
+            line-height: 12px;
+            .short-label {
+                font-weight: bold;
+                font-size: 18px;
+            }
+            .full-label {
+                font-size: 10px;
+            }
+        }
+        .armor-class-value {
+            min-height: 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+    
+    .eac-block {
+        top: 25%;
+        left: 10%;
+    }
+    
+    .kac-block {
+        bottom: 25%;
+        right: 10%;
+    }
+}
+
+.armor-class-edit-container {
+    display: flex;
+    font-family: $app-main-font;
+    border-bottom: 1px solid $app-dark-turquoise;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    .armor-class-label {
+        background-color: $app-dark-turquoise;
+        color: $app-white;
+        padding: 5px 5px 2px 5px;
+        line-height: 12px;
+        max-width: 20%;
+        .short-label {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .full-label {
+            font-size: 10px;
+        }
+    }
+    app-number-block {
+        flex: 0 1 auto;
+    }
+}

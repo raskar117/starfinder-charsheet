@@ -7,6 +7,7 @@ import { Initiative } from '../models/character-blocks/initiative.model';
 import { HealthResolve } from '../models/character-blocks/health-resolve.model';
 import { Skills } from '../models/character-blocks/skills.model';
 import { Abilities } from '../models/character-blocks/abilities.model';
+import { ArmorClass, ArmorClassPoints } from '../models/character-blocks/armor-class.model';
 
 @Injectable()
 export class CharacterService extends OfflineStorageService {
@@ -92,7 +93,10 @@ export class CharacterService extends OfflineStorageService {
                 char.healthResolve.hit,
                 char.healthResolve.resolve
             ) : null,
-            char.armorClass,
+            char.armorClass ? new ArmorClass(
+                new ArmorClassPoints(char.armorClass.energyArmorClass.armorBonus, char.armorClass.energyArmorClass.miscModifier),
+                new ArmorClassPoints(char.armorClass.kineticArmorClass.armorBonus, char.armorClass.kineticArmorClass.miscModifier)
+            ) : null,
             char.savingThrows,
             char.attackBonuses,
             char.weapons

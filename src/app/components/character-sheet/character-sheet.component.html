@@ -46,12 +46,17 @@
             <ion-col [sizeXs]="12" [sizeSm]="6">
               <app-skills-block [editMode]="editMode" [character]="character"></app-skills-block>
             </ion-col>
-            <ion-col></ion-col>
           </ion-row>
         </ion-grid>
       </ion-slide>
       <ion-slide>
-        <h1>{{ 'CHARACTER.SLIDES.ARMOR' | translate }}</h1>
+        <ion-grid class="character-blocks-container">
+          <ion-row>
+            <ion-col>
+              <app-armor-class-block [editMode]="editMode" [character]="character"></app-armor-class-block>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-slide>
       <ion-slide>
         <h1>{{ 'CHARACTER.SLIDES.WEAPONS' | translate }}</h1>
