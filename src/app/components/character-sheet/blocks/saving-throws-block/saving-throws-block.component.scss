@@ -1,0 +1,19 @@
+@import "../../../../../theme/variables.scss";
+
+.accordion-char-saving-throws {
+    .saving-throws-container {
+        display: flex;
+        .saving-throw-card {
+            max-width: 33%;
+            svg-icon {
+                height: 100%;
+                width: 100%;
+                /deep/ svg {
+                    fill: $app-dark-turquoise;
+                    height: 60%;
+                    width: 60%;
+                }
+            }
+        }
+    }
+}

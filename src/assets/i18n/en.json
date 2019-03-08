@@ -64,6 +64,13 @@
         "ARMOR_BONUS": "Armor bonus",
         "DEX_MODIFIER": "Dex mod",
         "MISC_MODIFIER": "Misc mod"
+      },
+      "SAVING_THROWS": {
+        "TITLE": "Saving throws",
+        "TOTAL": "Total",
+        "BASE_SAVE": "Base save",
+        "ABILITY_MODIFIER": "Ability mod",
+        "MISC_MODIFIER": "Misc mod"
       }
     },
     "ABILITY": {
@@ -73,6 +80,11 @@
       "INTELLIGENCE": "Intelligence",
       "WISDOM": "Wisdom",
       "CHARISMA": "Charisma"
+    },
+    "SAVING_THROWS": {
+      "FORTITUDE": "Fortitude",
+      "REFLEX": "Reflex",
+      "WILL": "Will"
     },
     "SKILLS": {
       "ACROBATICS": "Acrobatics",

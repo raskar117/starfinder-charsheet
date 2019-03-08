@@ -21,6 +21,7 @@ import { CharsheetNumberBlockComponent } from './widgets/charsheet-number-block/
 import { ArmorClassBlockComponent } from './blocks/armor-class-block/armor-class-block.component';
 import { AttackBonusesBlockComponent } from './blocks/attack-bonuses-block/attack-bonuses-block.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { SavingThrowsBlockComponent } from './blocks/saving-throws-block/saving-throws-block.component';
 
 @NgModule({
   entryComponents: [CharacterSheetComponent],
@@ -46,6 +47,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
     AbilitiesScoreBlockComponent,
     ArmorClassBlockComponent,
     AttackBonusesBlockComponent,
+    SavingThrowsBlockComponent,
     SkillsBlockComponent,
     HealthResolveBlockComponent
   ],
