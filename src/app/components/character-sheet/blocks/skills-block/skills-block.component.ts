@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Skill } from '../../../../models/character-blocks/skill.model';
 import { BlockComponent } from '../block-component';
+import { SkillKey } from '../../../../enums/skill-key.enum';
 
 @Component({
   selector: 'app-skills-block',
@@ -23,10 +24,18 @@ export class SkillsBlockComponent extends BlockComponent implements OnInit {
   ngOnInit() {
     this.skillsList = new Map<string, Skill>();
     if (this.character.skills) {
-      Object.keys(this.character.skills).map((s) => {
-        this.skillsList.set(s.toUpperCase(), this.character.skills[s]);
+      Object.keys(SkillKey).map((s) => {
+        this.skillsList.set(s, this.character.skills.find(skill => skill.key === s));
       });
     }
+  }
+
+  getSkillAbilityModifier(skill: Skill): number {
+    return this.character.abilities.find(a => a.key === skill.ability).modifier;
+  }
+
+  getSkillTotal(skill: Skill): number {
+    return skill.getTotal(this.getSkillAbilityModifier(skill));
   }
 
 }

@@ -1,19 +1,17 @@
-import { Skills } from './character-blocks/skills.model';
 import { CharacterInformation } from './character-blocks/character-information.model';
-import { Abilities } from './character-blocks/abilities.model';
 import { Skill } from './character-blocks/skill.model';
 import { Profession } from './character-blocks/profession.model';
-import { HealthResolve, HealthResolvePoints } from './character-blocks/health-resolve.model';
+import { HealthResolve } from './character-blocks/health-resolve.model';
 import { StorageEntity } from './storage-entity.model';
 import { Initiative } from './character-blocks/initiative.model';
-import { ArmorClass, ArmorClassPoints } from './character-blocks/armor-class.model';
-import { ARMOR_CLASS_BASE } from '../constants/character-sheet.constants';
+import { ArmorClass } from './character-blocks/armor-class.model';
+import { Ability } from './character-blocks/ability.model';
 
 export class Character extends StorageEntity {
     public information: CharacterInformation;
     public description: string;
-    public abilities: Abilities;
-    public skills: Skills;
+    public abilities: Array<Ability>;
+    public skills: Array<Skill>;
     public initiative: Initiative;
     public healthResolve: HealthResolve;
     public armorClass: ArmorClass;
@@ -23,7 +21,7 @@ export class Character extends StorageEntity {
     public weapons: Array<any>;
 
 
-    constructor(id: number, information: CharacterInformation, description: string, abilities: Abilities, skills: Skills,
+    constructor(id: number, information: CharacterInformation, description: string, abilities: Array<Ability>, skills: Array<Skill>,
         initiative: Initiative, healthResolve: HealthResolve, armorClass: ArmorClass, savingThrows: any, attackBonuses: any, weapons: Array<any>
     ) {
         super(id);

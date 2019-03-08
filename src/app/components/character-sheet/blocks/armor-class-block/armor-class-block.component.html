@@ -10,7 +10,7 @@
                         <span
                             class="full-label">{{'CHARACTER.BLOCK.ARMOR_CLASS.ENERGY_ARMOR_CLASS.FULL_TEXT' | translate}}</span>
                     </div>
-                    <div class="armor-class-value">{{character?.armorClass?.energyArmorClass.getTotal(character?.abilities?.dexterity.modifier)}}</div>
+                    <div class="armor-class-value">{{character?.armorClass?.energyArmorClass.getTotal(dexterityModifier)}}</div>
                 </div>
                 <div class="kac-block">
                     <div class="armor-class-label">
@@ -19,7 +19,7 @@
                         <span
                             class="full-label">{{'CHARACTER.BLOCK.ARMOR_CLASS.KINETIC_ARMOR_CLASS.FULL_TEXT' | translate}}</span>
                     </div>
-                    <div class="armor-class-value">{{character?.armorClass?.kineticArmorClass.getTotal(character?.abilities?.dexterity.modifier)}}</div>
+                    <div class="armor-class-value">{{character?.armorClass?.kineticArmorClass.getTotal(dexterityModifier)}}</div>
                 </div>
                 <!--
                     <div class="ac-vs-combat-block">
@@ -38,13 +38,13 @@
                         class="full-label">{{'CHARACTER.BLOCK.ARMOR_CLASS.ENERGY_ARMOR_CLASS.FULL_TEXT' | translate}}</span>
                 </div>
                 <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.TOTAL' | translate"
-                    [value]="character?.armorClass?.energyArmorClass.getTotal(character.abilities.dexterity.modifier)" [readonly]="true"></app-number-block>
+                    [value]="character?.armorClass?.energyArmorClass.getTotal(dexterityModifier)" [readonly]="true"></app-number-block>
                 <div class="number-block-separator"> = 10 + </div>
                 <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.ARMOR_BONUS' | translate"
                     [(value)]="character?.armorClass?.energyArmorClass.armorBonus"></app-number-block>
                 <div class="number-block-separator"> + </div>
                 <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.DEX_MODIFIER' | translate"
-                    [(value)]="character?.abilities?.dexterity.modifier" [readonly]="true">
+                    [(value)]="dexterityModifier" [readonly]="true">
                 </app-number-block>
                 <div class="number-block-separator"> + </div>
                 <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.MISC_MODIFIER' | translate"
@@ -58,13 +58,13 @@
                         class="full-label">{{'CHARACTER.BLOCK.ARMOR_CLASS.KINETIC_ARMOR_CLASS.FULL_TEXT' | translate}}</span>
                 </div>
                 <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.TOTAL' | translate"
-                    [value]="character?.armorClass?.kineticArmorClass.getTotal(character.abilities.dexterity.modifier)" [readonly]="true"></app-number-block>
+                    [value]="character?.armorClass?.kineticArmorClass.getTotal(dexterityModifier)" [readonly]="true"></app-number-block>
                 <div class="number-block-separator"> = 10 + </div>
                 <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.ARMOR_BONUS' | translate"
                     [(value)]="character?.armorClass?.kineticArmorClass.armorBonus"></app-number-block>
                 <div class="number-block-separator"> + </div>
                 <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.DEX_MODIFIER' | translate"
-                    [(value)]="character?.abilities?.dexterity.modifier" [readonly]="true">
+                    [(value)]="dexterityModifier" [readonly]="true">
                 </app-number-block>
                 <div class="number-block-separator"> + </div>
                 <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.MISC_MODIFIER' | translate"

@@ -1,5 +1,6 @@
 import { BlockComponent } from '../block-component';
 import { Component, OnInit } from '@angular/core';
+import { AbilityKey } from '../../../../enums/ability-key.enum';
 
 @Component({
     selector: 'app-armor-class-block',
@@ -13,6 +14,10 @@ export class ArmorClassBlockComponent extends BlockComponent implements OnInit {
     }
 
     ngOnInit() {
+    }
+
+    public get dexterityModifier(): number {
+        return this.character.abilities.find(a => a.key === AbilityKey.DEXTERITY).modifier;
     }
 
 }

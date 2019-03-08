@@ -1,17 +1,21 @@
+import { SkillKey } from '../../enums/skill-key.enum';
+import { AbilityKey } from '../../enums/ability-key.enum';
 export class Skill {
+    public key: SkillKey;
+    public ability: AbilityKey;
     public ranks: number;
     public classBonus: number;
-    public abilityModifier: number;
     public miscModifier: number;
 
-    constructor(ranks: number, classBonus: number, abilityModifier: number, miscModifier: number) {
+    constructor(key: SkillKey, ability: AbilityKey, ranks: number, classBonus: number, miscModifier: number) {
+        this.key = key;
+        this.ability = ability;
         this.ranks = ranks;
         this.classBonus = classBonus;
-        this.abilityModifier = abilityModifier;
         this.miscModifier = miscModifier;
     }
 
-    public get total(): number {
-        return this.ranks + this.classBonus + this.abilityModifier + this.miscModifier;
+    public getTotal(abilityModifier: number): number {
+        return this.ranks + this.classBonus + abilityModifier + this.miscModifier;
     }
 }
