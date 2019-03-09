@@ -4,8 +4,8 @@
             <ng-container *ngIf="!editMode">
                 <ion-card *ngFor="let savingThrow of character.savingThrows" size="2" class="saving-throw-card">
                     <ion-card-header>
-                        <svg-icon src="assets/icon/saving-throws/fortitude.svg"></svg-icon>
-                        <h4>{{'CHARACTER.SAVING_THROWS.' + savingThrow.key | translate}}</h4>
+                        <svg-icon [src]="'assets/icon/saving-throws/' + savingThrow.key.toLowerCase() + '.svg'"></svg-icon>
+                        <h4>{{'CHARACTER.SAVING_THROWS.' + savingThrow.key | translate | uppercase}}</h4>
                     </ion-card-header>
                     <ion-card-content>
                         {{getSavingThrowTotal(savingThrow)}}

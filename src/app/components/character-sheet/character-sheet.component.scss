@@ -66,6 +66,10 @@
     left: 0;
     height: 52px;
     z-index: 1000000;
+    font-family: $app-main-font;
+    ion-tab-button.tab-selected {
+        color: $app-dark-midnight-blue;
+    }
 }
 
 /deep/ .block-accordion {
