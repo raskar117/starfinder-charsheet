@@ -37,18 +37,18 @@
                     <span
                         class="full-label">{{'CHARACTER.BLOCK.ARMOR_CLASS.ENERGY_ARMOR_CLASS.FULL_TEXT' | translate}}</span>
                 </div>
-                <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.TOTAL' | translate"
-                    [value]="character?.armorClass?.energyArmorClass.getTotal(dexterityModifier)" [readonly]="true"></app-number-block>
+                <app-number-block [placeholder]="'CHARACTER.BLOCK.ARMOR_CLASS.TOTAL' | translate"
+                    [currentValue]="character?.armorClass?.energyArmorClass.getTotal(dexterityModifier)" [readonly]="true"></app-number-block>
                 <div class="number-block-separator"> = 10 + </div>
-                <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.ARMOR_BONUS' | translate"
-                    [(value)]="character?.armorClass?.energyArmorClass.armorBonus"></app-number-block>
+                <app-number-block [placeholder]="'CHARACTER.BLOCK.ARMOR_CLASS.ARMOR_BONUS' | translate"
+                    [(currentValue)]="character?.armorClass?.energyArmorClass.armorBonus"></app-number-block>
                 <div class="number-block-separator"> + </div>
-                <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.DEX_MODIFIER' | translate"
-                    [(value)]="dexterityModifier" [readonly]="true">
+                <app-number-block [placeholder]="'CHARACTER.BLOCK.ARMOR_CLASS.DEX_MODIFIER' | translate"
+                    [(currentValue)]="dexterityModifier" [readonly]="true">
                 </app-number-block>
                 <div class="number-block-separator"> + </div>
-                <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.MISC_MODIFIER' | translate"
-                    [(value)]="character?.armorClass?.energyArmorClass.miscModifier"></app-number-block>
+                <app-number-block [placeholder]="'CHARACTER.BLOCK.ARMOR_CLASS.MISC_MODIFIER' | translate"
+                    [(currentValue)]="character?.armorClass?.energyArmorClass.miscModifier"></app-number-block>
             </div>
             <div class="armor-class-edit-container">
                 <div class="armor-class-label">
@@ -57,18 +57,18 @@
                     <span
                         class="full-label">{{'CHARACTER.BLOCK.ARMOR_CLASS.KINETIC_ARMOR_CLASS.FULL_TEXT' | translate}}</span>
                 </div>
-                <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.TOTAL' | translate"
-                    [value]="character?.armorClass?.kineticArmorClass.getTotal(dexterityModifier)" [readonly]="true"></app-number-block>
+                <app-number-block [placeholder]="'CHARACTER.BLOCK.ARMOR_CLASS.TOTAL' | translate"
+                    [currentValue]="character?.armorClass?.kineticArmorClass.getTotal(dexterityModifier)" [readonly]="true"></app-number-block>
                 <div class="number-block-separator"> = 10 + </div>
-                <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.ARMOR_BONUS' | translate"
-                    [(value)]="character?.armorClass?.kineticArmorClass.armorBonus"></app-number-block>
+                <app-number-block [placeholder]="'CHARACTER.BLOCK.ARMOR_CLASS.ARMOR_BONUS' | translate"
+                    [(currentValue)]="character?.armorClass?.kineticArmorClass.armorBonus"></app-number-block>
                 <div class="number-block-separator"> + </div>
-                <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.DEX_MODIFIER' | translate"
-                    [(value)]="dexterityModifier" [readonly]="true">
+                <app-number-block [placeholder]="'CHARACTER.BLOCK.ARMOR_CLASS.DEX_MODIFIER' | translate"
+                    [(currentValue)]="dexterityModifier" [readonly]="true">
                 </app-number-block>
                 <div class="number-block-separator"> + </div>
-                <app-number-block [label]="'CHARACTER.BLOCK.ARMOR_CLASS.MISC_MODIFIER' | translate"
-                    [(value)]="character?.armorClass?.kineticArmorClass.miscModifier"></app-number-block>
+                <app-number-block [placeholder]="'CHARACTER.BLOCK.ARMOR_CLASS.MISC_MODIFIER' | translate"
+                    [(currentValue)]="character?.armorClass?.kineticArmorClass.miscModifier"></app-number-block>
             </div>
         </ng-container>
     </p-accordionTab>

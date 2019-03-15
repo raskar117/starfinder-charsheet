@@ -1,18 +1,17 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CharsheetGenericInputComponent } from '../charsheet-generic-input.component';
 
 @Component({
   selector: 'app-input-text',
   templateUrl: './charsheet-input-text.component.html',
   styleUrls: ['./charsheet-input-text.component.scss']
 })
-export class CharsheetInputTextComponent implements OnInit {
-  @Input() value: any;
-
-  @Input() placeholder: string;
-
+export class CharsheetInputTextComponent extends CharsheetGenericInputComponent<string> implements OnInit {
   @Input() type = 'text';
 
-  constructor() { }
+  constructor() {
+    super();
+  }
 
   ngOnInit() {
   }

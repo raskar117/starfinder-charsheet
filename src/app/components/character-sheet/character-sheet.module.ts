@@ -22,6 +22,7 @@ import { ArmorClassBlockComponent } from './blocks/armor-class-block/armor-class
 import { AttackBonusesBlockComponent } from './blocks/attack-bonuses-block/attack-bonuses-block.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { SavingThrowsBlockComponent } from './blocks/saving-throws-block/saving-throws-block.component';
+import { CharsheetInputSelectComponent } from './widgets/charsheet-input-select/charsheet-input-select.component';
 
 @NgModule({
   entryComponents: [CharacterSheetComponent],
@@ -41,6 +42,7 @@ import { SavingThrowsBlockComponent } from './blocks/saving-throws-block/saving-
     CharacterSheetComponent,
     CharsheetInputTextComponent,
     CharsheetInputCounterComponent,
+    CharsheetInputSelectComponent,
     CharsheetNumberBlockComponent,
     CharInfoBlockComponent,
     DescriptionBlockComponent,

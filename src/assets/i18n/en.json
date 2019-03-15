@@ -81,6 +81,28 @@
       "WISDOM": "Wisdom",
       "CHARISMA": "Charisma"
     },
+    "CLASS": {
+      "ENVOY": "Envoy",
+      "MECHANIC": "Mechanic",
+      "MYSTIC": "Mystic",
+      "OPERATIVE": "Operative",
+      "SOLARIAN": "Solarian",
+      "SOLDIER": "Soldier",
+      "TECHNOMANCER": "Technomancer"
+    },
+    "GENDER": {
+      "MALE": "Male",
+      "FEMALE": "Female"
+    },
+    "RACE": {
+      "ANDROID": "Android",
+      "HUMAN": "Human",
+      "KASATHA": "Kasatha",
+      "LASHUNTA": "Lashunta",
+      "SHIRREN": "Shirren",
+      "VESK": "Vesk",
+      "YSOKI": "Ysoki"
+    },
     "SAVING_THROWS": {
       "FORTITUDE": "Fortitude",
       "REFLEX": "Reflex",
@@ -107,6 +129,33 @@
       "SLEIGHTOFHAND": "Sleight of Hand",
       "STEALTH": "Stealth",
       "SURVIVAL": "Survival"
+    },
+    "THEME": {
+      "ACE_PILOT": "Ace Pilot",
+      "BIOTECHNICIAN": "Biotechnician",
+      "BOUNTY_HUNTER": "Bounty Hunter",
+      "CORPORATE_AGENT": "Corporate Agent",
+      "CULTIST": "Cultist",
+      "CYBERBORN": "Cyberborn",
+      "DEATH_TOUCHED": "Death-Touched",
+      "DRAGONBLOOD": "Dragonblood",
+      "DREAM_PROPHET": "Dream Prophet",
+      "FORMLESS_EMISSARY": "Formless Emissary",
+      "GLADIATOR": "Gladiator",
+      "ICON": "Icon",
+      "MERCENARY": "Mercenary",
+      "OUTLAW": "Outlaw",
+      "PRIEST": "Priest",
+      "ROBOTICIST": "Roboticist",
+      "SCHOLAR": "Scholar",
+      "SHIPBUILDER": "Shipbuilder (Manu)",
+      "SOLAR_DISCIPLE": "Solar Disciple",
+      "SPACE_PIRATE": "Space Pirate",
+      "SPACEFARER": "Spacefarer",
+      "TEMPERED_PILGRIM": "Tempered Pilgrim",
+      "WILD_WARDEN": "Wild Warden",
+      "XENOARCHAEOLOGIST": "Xenoarchaeologist",
+      "XENOSEEKER": "Xenoseeker"
     }
   }
 }

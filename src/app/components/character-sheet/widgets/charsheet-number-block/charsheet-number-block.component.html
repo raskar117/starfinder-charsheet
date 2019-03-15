@@ -1,11 +1,11 @@
 <div class="number-block">
     <ng-container *ngIf="readonly">
-        <div class="readonly-block">{{value}}</div>
-        <label>{{label}}</label>
+        <div class="readonly-block">{{currentValue}}</div>
+        <label>{{placeholder}}</label>
     </ng-container>
     <ng-container *ngIf="!readonly">
-        <p-spinner size="1" [maxlength]="2" [min]="0" [max]="100" [(ngModel)]="value">
+        <p-spinner size="1" [maxlength]="2" [min]="0" [max]="100" [(ngModel)]="currentValue">
         </p-spinner>
-        <label>{{label}}</label>
+        <label>{{placeholder}}</label>
     </ng-container>
 </div>

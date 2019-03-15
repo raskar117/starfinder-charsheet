@@ -30,7 +30,7 @@ export class SharedServices {
 
         return new Character(
             null,
-            new CharacterInformation('Elliad', ClassType.OPERATIVE, 1, RaceType.KASATHAS, null, null, null, null, '', '', '', ''),
+            new CharacterInformation('Elliad', ClassType.OPERATIVE, 1, RaceType.KASATHA, null, null, null, null, '', '', '', ''),
             '',
             this.instanciateAbilities(),
             this.instanciateSkills(),

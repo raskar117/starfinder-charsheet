@@ -12,15 +12,21 @@
                 align-items: baseline;
                 justify-content: space-between;
                 min-height: 20px;
-                span {
-                    &.label {
-                        font-size: 10px;
-                    }
-                    &.value {
-                        font-size: 14px;
-                        font-weight: bold;
-                    }
+                /deep/ app-input-select, app-input-text {
+                    width: 100%;
                 }
+            }
+        }
+    }
+    ion-col {
+        ion-row {
+            font-family: $app-main-font;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            min-height: 20px;
+            /deep/ app-input-select, app-input-text {
+                width: 100%;
             }
         }
     }

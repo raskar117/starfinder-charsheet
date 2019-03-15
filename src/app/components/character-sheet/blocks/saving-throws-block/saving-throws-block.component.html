@@ -18,19 +18,19 @@
                         <span
                             class="short-label">{{'CHARACTER.SAVING_THROWS.' + savingThrow.key | translate}}</span><br>
                     </div>
-                    <app-number-block [label]="'CHARACTER.BLOCK.SAVING_THROWS.TOTAL' | translate"
-                        [value]="getSavingThrowTotal(savingThrow)" [readonly]="true">
+                    <app-number-block [placeholder]="'CHARACTER.BLOCK.SAVING_THROWS.TOTAL' | translate"
+                        [currentValue]="getSavingThrowTotal(savingThrow)" [readonly]="true">
                     </app-number-block>
                     <div class="number-block-separator"> = 10 + </div>
-                    <app-number-block [label]="'CHARACTER.BLOCK.SAVING_THROWS.BASE_SAVE' | translate"
-                        [(value)]="savingThrow.baseSave"></app-number-block>
+                    <app-number-block [placeholder]="'CHARACTER.BLOCK.SAVING_THROWS.BASE_SAVE' | translate"
+                        [(currentValue)]="savingThrow.baseSave"></app-number-block>
                     <div class="number-block-separator"> + </div>
-                    <app-number-block [label]="'CHARACTER.BLOCK.SAVING_THROWS.ABILITY_MODIFIER' | translate"
-                        [value]="getSavingThrowsAbilityModifier(savingThrow)" [readonly]="true">
+                    <app-number-block [placeholder]="'CHARACTER.BLOCK.SAVING_THROWS.ABILITY_MODIFIER' | translate"
+                        [currentValue]="getSavingThrowsAbilityModifier(savingThrow)" [readonly]="true">
                     </app-number-block>
                     <div class="number-block-separator"> + </div>
-                    <app-number-block [label]="'CHARACTER.BLOCK.SAVING_THROWS.MISC_MODIFIER' | translate"
-                        [(value)]="savingThrow.miscModifier"></app-number-block>
+                    <app-number-block [placeholder]="'CHARACTER.BLOCK.SAVING_THROWS.MISC_MODIFIER' | translate"
+                        [(currentValue)]="savingThrow.miscModifier"></app-number-block>
                 </div>
             </ng-container>
         </div>

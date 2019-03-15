@@ -1,84 +1,55 @@
 <p-accordion class="block-accordion accordion-char-info">
   <p-accordionTab [selected]="'true'" [header]="'CHARACTER.BLOCK.INFORMATION.TITLE' | translate">
-    <ion-grid *ngIf="editMode">
-      <ion-row>
-        <ion-col>
-          <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.CLASS' | translate" [value]="character.information.classType"></app-input-text>
-        </ion-col>
-        <ion-col>
-          <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.RACE' | translate" [value]="character.information.race"></app-input-text>
-        </ion-col>
-        <ion-col>
-          <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.THEME' | translate" [value]="character.information.theme"></app-input-text>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="2">
-          <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.SIZE' | translate" [value]="character.information.size"></app-input-text>
-        </ion-col>
-        <ion-col size="2">
-          <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.SPEED' | translate" [value]="character.information.speed"></app-input-text>
-        </ion-col>
-        <ion-col size="3">
-          <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.GENDER' | translate" [value]="character.information.gender"></app-input-text>
-        </ion-col>
-        <ion-col size="5">
-          <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.HOMEWORLD' | translate" [value]="character.information.homeWorld"></app-input-text>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.ALIGNMENT' | translate" [value]="character.information.alignment"></app-input-text>
-        </ion-col>
-        <ion-col>
-          <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.DEITY' | translate" [value]="character.information.deity"></app-input-text>
-        </ion-col>
-        <ion-col>
-          <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.PLAYER' | translate" [value]="character.information.playerName"></app-input-text>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    <ion-grid class="readonly-grid" *ngIf="!editMode">
+    <ion-grid [ngClass]="{'readonly-grid': !editMode}">
       <ion-row>
         <ion-col>
           <ion-row>
-            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.CLASS' | translate}}:</span>
-            <span class="value">&nbsp;{{character.information.classType}}</span>
+            <app-input-select [placeholder]="'CHARACTER.BLOCK.INFORMATION.CLASS' | translate" [values]="classTypes"
+              [(currentValue)]="character.information.classType" [editMode]="editMode"
+              [tradEnumKey]="'CHARACTER.CLASS'">
+            </app-input-select>
           </ion-row>
           <ion-row>
-            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.RACE' | translate}}:</span>
-            <span class="value">&nbsp;{{character.information.race}}</span>
+            <app-input-select [placeholder]="'CHARACTER.BLOCK.INFORMATION.RACE' | translate" [values]="raceTypes"
+              [(currentValue)]="character.information.race" [editMode]="editMode" [tradEnumKey]="'CHARACTER.RACE'">
+            </app-input-select>
           </ion-row>
           <ion-row>
-            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.THEME' | translate}}:</span>
-            <span class="value">&nbsp;{{character.information.theme}}</span>
+            <app-input-select [placeholder]="'CHARACTER.BLOCK.INFORMATION.THEME' | translate" [values]="themes"
+              [(currentValue)]="character.information.theme" [editMode]="editMode" [tradEnumKey]="'CHARACTER.THEME'">
+            </app-input-select>
           </ion-row>
           <ion-row>
-            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.SIZE' | translate}}:</span>
-            <span class="value">&nbsp;{{character.information.size}}</span>
+            <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.SIZE' | translate" [editMode]="editMode" [type]="'number'"
+              [(currentValue)]="character.information.size"></app-input-text>
           </ion-row>
           <ion-row>
-            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.SPEED' | translate}}:</span>
-            <span class="value">&nbsp;{{character.information.speed}}</span>
+            <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.SPEED' | translate" [editMode]="editMode" [type]="'number'"
+              [(currentValue)]="character.information.speed"></app-input-text>
           </ion-row>
           <ion-row>
-            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.GENDER' | translate}}:</span>
-            <span class="value">&nbsp;{{character.information.gender}}</span>
+            <app-input-select [placeholder]="'CHARACTER.BLOCK.INFORMATION.GENDER' | translate" [values]="genders"
+              [(currentValue)]="character.information.gender" [editMode]="editMode" [tradEnumKey]="'CHARACTER.GENDER'">
+            </app-input-select>
           </ion-row>
           <ion-row>
-            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.HOMEWORLD' | translate}}:</span>
-            <span class="value">&nbsp;{{character.information.homeWorld}}</span>
+            <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.HOMEWORLD' | translate" [editMode]="editMode"
+              [(currentValue)]="character.information.homeWorld"></app-input-text>
           </ion-row>
           <ion-row>
-            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.ALIGNMENT' | translate}}:</span>
-            <span class="value">&nbsp;{{character.information.alignment}}</span>
+            <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.ALIGNMENT' | translate" [editMode]="editMode"
+              [(currentValue)]="character.information.alignment"></app-input-text>
           </ion-row>
           <ion-row>
-            <span class="label">{{'CHARACTER.BLOCK.INFORMATION.DEITY' | translate}}:</span>
-            <span class="value">&nbsp;{{character.information.deity}}</span>
+              <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.DEITY' | translate" [editMode]="editMode"
+              [(currentValue)]="character.information.deity"></app-input-text>
+          </ion-row>
+          <ion-row>
+              <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.PLAYER' | translate" [editMode]="editMode"
+              [(currentValue)]="character.information.playerName"></app-input-text>
           </ion-row>
         </ion-col>
-        <ion-col>
+        <ion-col *ngIf="!editMode">
           <div class="character-picture">
             <img src="../../../../../assets/images/races/race_kasatha.png">
           </div>

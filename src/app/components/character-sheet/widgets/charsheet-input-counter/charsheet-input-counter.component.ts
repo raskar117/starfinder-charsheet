@@ -1,23 +1,12 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { CharsheetGenericInputComponent } from '../charsheet-generic-input.component';
 
 @Component({
   selector: 'app-input-counter',
   templateUrl: './charsheet-input-counter.component.html',
   styleUrls: ['./charsheet-input-counter.component.scss']
 })
-export class CharsheetInputCounterComponent implements OnInit {
-  @Input()
-  get currentValue() {
-    return this._currentValue;
-  }
-
-  set currentValue(val) {
-    this._currentValue = val;
-    this.currentValueChange.emit(this._currentValue);
-  }
-
-  @Output() currentValueChange = new EventEmitter<number>();
-
+export class CharsheetInputCounterComponent extends CharsheetGenericInputComponent<number> implements OnInit {
   @Input()
   get total() {
     return this._total;
@@ -29,14 +18,11 @@ export class CharsheetInputCounterComponent implements OnInit {
 
   @Output() totalChange = new EventEmitter<number>();
 
-  @Input() placeholder: string;
-
-  @Input() editMode: boolean;
-
   private _total: number;
-  private _currentValue: number;
 
-  constructor() { }
+  constructor() {
+    super();
+  }
 
   ngOnInit() {
   }

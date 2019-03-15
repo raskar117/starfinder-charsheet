@@ -1,0 +1,13 @@
+
+.readonly-value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .label {
+        font-size: 10px;
+    }
+    .value {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
