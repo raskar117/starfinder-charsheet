@@ -8,6 +8,14 @@
       "MY_CHARACTERS": "My characters"
     }
   },
+  "NEW_CHARACTER": {
+    "TITLE": "New character",
+    "INPUT_NAME": "Enter character's name",
+    "INPUT_RACE": "Choose race",
+    "INPUT_CLASS": "Choose class",
+    "BACK": "Back",
+    "NEXT": "Next"
+  },
   "CHARACTER": {
     "LEVEL" : {
       "TITLE": "Level"
