@@ -1,9 +1,11 @@
+import { ClassType } from './../../enums/class-type.enum';
 import { Nav, Slides } from '@ionic/angular';
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { Character } from '../../models/character.model';
 import { CharacterService } from '../../services/character.service';
 import { RaceType } from '../../enums/race-type.enum';
 import { SharedServices } from '../../services/shared-services.service';
+import { Gender } from '../../enums/gender.enum';
 
 @Component({
     selector: 'app-new-character',
@@ -18,8 +20,8 @@ export class NewCharacterComponent implements OnInit, OnDestroy {
     public show: boolean;
     public activeSlide = 0;
     public raceTypes = Object.keys(RaceType);
-
-    public selectedRace: RaceType;
+    public classTypes = Object.keys(ClassType);
+    public genders = Object.keys(Gender);
 
     constructor(
         private nav: Nav,
@@ -30,7 +32,9 @@ export class NewCharacterComponent implements OnInit, OnDestroy {
     ngOnInit() {
         this.show = true;
         this.newCharacter = this.sharedServices.generateNewCharacter();
-        this.selectedRace = RaceType[this.raceTypes[0]];
+        this.newCharacter.information.race = RaceType[this.raceTypes[0]];
+        this.newCharacter.information.classType = ClassType[this.classTypes[0]];
+        this.newCharacter.information.gender = Gender[this.genders[0]];
     }
 
     ngOnDestroy() {
@@ -57,6 +61,15 @@ export class NewCharacterComponent implements OnInit, OnDestroy {
     }
 
     public selectRace(race: string) {
-        this.selectedRace = RaceType[race];
+        this.newCharacter.information.race = RaceType[race];
+    }
+
+    public selectClass(classtype: string) {
+        this.newCharacter.information.classType = ClassType[classtype];
+    }
+
+    public selectGender(event: any) {
+        const gender = event.detail.value;
+        this.newCharacter.information.gender = Gender[gender] as Gender;
     }
 }
