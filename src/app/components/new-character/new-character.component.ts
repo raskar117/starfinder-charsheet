@@ -6,6 +6,7 @@ import { CharacterService } from '../../services/character.service';
 import { RaceType } from '../../enums/race-type.enum';
 import { SharedServices } from '../../services/shared-services.service';
 import { Gender } from '../../enums/gender.enum';
+import { CharacterSheetComponent } from '../character-sheet/character-sheet.component';
 
 @Component({
     selector: 'app-new-character',
@@ -56,8 +57,14 @@ export class NewCharacterComponent implements OnInit, OnDestroy {
     }
 
     public goForward() {
-        this.activeSlide++;
-        this.slidesContainer.slideTo(this.activeSlide);
+        this.slidesContainer.isEnd().then((isEnd) => {
+            if (isEnd) {
+                this.nav.push(CharacterSheetComponent, {character: this.newCharacter});
+            } else {
+                this.activeSlide++;
+                this.slidesContainer.slideTo(this.activeSlide);
+            }
+        });
     }
 
     public selectRace(race: string) {

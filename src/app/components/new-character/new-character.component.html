@@ -34,17 +34,22 @@
                 </div>
             </ion-slide>
             <ion-slide class="swiper-no-swiping">
-                <ion-segment (ionChange)="selectGender($event)">
-                    <ion-segment-button [value]="genders[0]">
-                        <ion-icon name="male"></ion-icon>
-                        <ion-label>{{genders[0]}}</ion-label>
-                    </ion-segment-button>
-                    <ion-segment-button [value]="genders[0]">
-                        <ion-icon name="female"></ion-icon>
-                        <ion-label>{{genders[1]}}</ion-label>
-                    </ion-segment-button>
-                </ion-segment>
-                <ion-input [placeholder]="'NEW_CHARACTER.INPUT_NAME' | translate"></ion-input>
+                <h2>{{'NEW_CHARACTER.INPUT_CLASS' | translate}}</h2>
+                <div class="selection-container">
+                    <div>
+                        <ion-segment (ionChange)="selectGender($event)" [value]="newCharacter.information.gender">
+                            <ion-segment-button [value]="genders[0]">
+                                <ion-icon name="male"></ion-icon>
+                                <ion-label>{{genders[0]}}</ion-label>
+                            </ion-segment-button>
+                            <ion-segment-button [value]="genders[1]">
+                                <ion-icon name="female"></ion-icon>
+                                <ion-label>{{genders[1]}}</ion-label>
+                            </ion-segment-button>
+                        </ion-segment>
+                        <ion-input [value]="newCharacter.information.name" [placeholder]="'NEW_CHARACTER.INPUT_NAME' | translate"></ion-input>
+                    </div>
+                </div>
 
             </ion-slide>
         </ion-slides>

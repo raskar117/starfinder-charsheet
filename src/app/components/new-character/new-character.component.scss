@@ -84,6 +84,9 @@
                             margin: auto;
                         }
                     }
+                    ion-segment ion-segment-button {
+                        color: $app-dark-turquoise;
+                    }
                 }
             }
         }
