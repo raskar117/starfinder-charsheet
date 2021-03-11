@@ -1,0 +1,68 @@
+@import "../../../../../theme/variables.scss";
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+  .skill-row {
+    font-family: $app-main-font;
+    flex: 1 1 auto;
+    display: flex;
+    margin-bottom: 10px;
+    margin-right: 8px;
+    background-color: $app-ultra-light-gray;
+    box-shadow: -1px 1px 3px 0px $app-light-gray;
+    border-radius: 5px;
+    min-width: 150px;
+    .skill-label {
+      flex: 1;
+      padding-left: 5px;
+      text-align: left;
+    }
+    .skill-total {
+      flex: 0;
+      min-width: 30px;
+      text-align: center;
+    }
+    .skill-input {
+      margin-left: 10px;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      ::ng-deep .p-spinner {
+        width: 38px;
+        .p-spinner-input {
+          padding: 3px 16px 3px 0px;
+          text-align: right;
+          font-family: $app-main-font;
+          border-color: $app-main-border-color;
+          height: 28px;
+          width: 100%;
+        }
+        .p-spinner-button {
+          width: 12px;
+          font-size: 10px;
+          background: transparent;
+          color: black;
+          border: none;
+        }
+      }
+      .skill-total {
+        height: 28px;
+        line-height: 28px;
+        border: 1px solid black;
+        border-radius: 3px;
+      }
+      label {
+        font-size: 0.6em;
+      }
+      input {
+        padding: 0;
+      }
+    }
+  }
+
+}

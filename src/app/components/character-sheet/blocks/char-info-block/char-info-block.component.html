@@ -1,0 +1,60 @@
+<p-accordion class="block-accordion accordion-char-info">
+  <p-accordionTab [selected]="'true'" [header]="'CHARACTER.BLOCK.INFORMATION.TITLE' | translate">
+    <ion-grid [ngClass]="{'readonly-grid': !editMode}">
+      <ion-row>
+        <ion-col>
+          <ion-row>
+            <app-input-select [placeholder]="'CHARACTER.BLOCK.INFORMATION.CLASS' | translate" [values]="classTypes"
+              [(currentValue)]="character.information.classType" [editMode]="editMode"
+              [tradEnumKey]="'CHARACTER.CLASS'">
+            </app-input-select>
+          </ion-row>
+          <ion-row>
+            <app-input-select [placeholder]="'CHARACTER.BLOCK.INFORMATION.RACE' | translate" [values]="raceTypes"
+              [(currentValue)]="character.information.race" [editMode]="editMode" [tradEnumKey]="'CHARACTER.RACE'">
+            </app-input-select>
+          </ion-row>
+          <ion-row>
+            <app-input-select [placeholder]="'CHARACTER.BLOCK.INFORMATION.THEME' | translate" [values]="themes"
+              [(currentValue)]="character.information.theme" [editMode]="editMode" [tradEnumKey]="'CHARACTER.THEME'">
+            </app-input-select>
+          </ion-row>
+          <ion-row>
+            <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.SIZE' | translate" [editMode]="editMode" [type]="'number'"
+              [(currentValue)]="character.information.size"></app-input-text>
+          </ion-row>
+          <ion-row>
+            <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.SPEED' | translate" [editMode]="editMode" [type]="'number'"
+              [(currentValue)]="character.information.speed"></app-input-text>
+          </ion-row>
+          <ion-row>
+            <app-input-select [placeholder]="'CHARACTER.BLOCK.INFORMATION.GENDER' | translate" [values]="genders"
+              [(currentValue)]="character.information.gender" [editMode]="editMode" [tradEnumKey]="'CHARACTER.GENDER'">
+            </app-input-select>
+          </ion-row>
+          <ion-row>
+            <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.HOMEWORLD' | translate" [editMode]="editMode"
+              [(currentValue)]="character.information.homeWorld"></app-input-text>
+          </ion-row>
+          <ion-row>
+            <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.ALIGNMENT' | translate" [editMode]="editMode"
+              [(currentValue)]="character.information.alignment"></app-input-text>
+          </ion-row>
+          <ion-row>
+              <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.DEITY' | translate" [editMode]="editMode"
+              [(currentValue)]="character.information.deity"></app-input-text>
+          </ion-row>
+          <ion-row>
+              <app-input-text [placeholder]="'CHARACTER.BLOCK.INFORMATION.PLAYER' | translate" [editMode]="editMode"
+              [(currentValue)]="character.information.playerName"></app-input-text>
+          </ion-row>
+        </ion-col>
+        <ion-col *ngIf="!editMode">
+          <div class="character-picture">
+            <img src="assets/images/races/race_{{character.information.race | lowercase}}.png">
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </p-accordionTab>
+</p-accordion>

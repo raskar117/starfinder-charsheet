@@ -1,0 +1,19 @@
+@import "../../../../../theme/variables.scss";
+
+.health-resolve-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: $app-dark-slate-blue;
+    color: white;
+    padding: 5px 0;
+    border: solid $app-turquoise;
+    border-width: 0 0 2px 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%,
+        10px 100%, 0% calc(100% - 10px), 0% 10px);
+    clip-path: polygon(0 0, 100% 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%,
+        10px 100%, 0% calc(100% - 10px), 0% 10px);
+    app-input-counter {
+        flex: 0 1 auto;
+        width: 25%;
+    }
+}

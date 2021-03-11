@@ -1,0 +1,38 @@
+<p-accordion class="block-accordion accordion-char-saving-throws">
+    <p-accordionTab [selected]="'true'" [header]="'CHARACTER.BLOCK.SAVING_THROWS.TITLE' | translate">
+        <div class="saving-throws-container">
+            <ng-container *ngIf="!editMode">
+                <ion-card *ngFor="let savingThrow of character.savingThrows" size="2" class="saving-throw-card">
+                    <ion-card-header>
+                        <svg-icon [src]="'assets/icon/saving-throws/' + savingThrow.key.toLowerCase() + '.svg'"></svg-icon>
+                        <h4>{{'CHARACTER.SAVING_THROWS.' + savingThrow.key | translate | uppercase}}</h4>
+                    </ion-card-header>
+                    <ion-card-content>
+                        {{getSavingThrowTotal(savingThrow)}}
+                    </ion-card-content>
+                </ion-card>
+            </ng-container>
+            <ng-container *ngIf="editMode">
+                <div class="saving-throw-edit-container" *ngFor="let savingThrow of character.savingThrows">
+                    <div class="saving-throw-label">
+                        <span
+                            class="short-label">{{'CHARACTER.SAVING_THROWS.' + savingThrow.key | translate}}</span><br>
+                    </div>
+                    <app-number-block [placeholder]="'CHARACTER.BLOCK.SAVING_THROWS.TOTAL' | translate"
+                        [currentValue]="getSavingThrowTotal(savingThrow)" [readonly]="true">
+                    </app-number-block>
+                    <div class="number-block-separator"> = 10 + </div>
+                    <app-number-block [placeholder]="'CHARACTER.BLOCK.SAVING_THROWS.BASE_SAVE' | translate"
+                        [(currentValue)]="savingThrow.baseSave"></app-number-block>
+                    <div class="number-block-separator"> + </div>
+                    <app-number-block [placeholder]="'CHARACTER.BLOCK.SAVING_THROWS.ABILITY_MODIFIER' | translate"
+                        [currentValue]="getSavingThrowsAbilityModifier(savingThrow)" [readonly]="true">
+                    </app-number-block>
+                    <div class="number-block-separator"> + </div>
+                    <app-number-block [placeholder]="'CHARACTER.BLOCK.SAVING_THROWS.MISC_MODIFIER' | translate"
+                        [(currentValue)]="savingThrow.miscModifier"></app-number-block>
+                </div>
+            </ng-container>
+        </div>
+    </p-accordionTab>
+</p-accordion>

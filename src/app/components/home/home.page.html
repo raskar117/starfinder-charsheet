@@ -1,14 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content padding>
-  <p>My Characters :</p>
+<ion-content>
+  <div class="home-content">
+    <div class="header-title">
+      <span>{{ 'APP.TITLE' | translate }}</span>
+    </div>
+    <div class="buttons-container">
+      <ion-button fill="clear" [size]="'large'" (click)="createNewCharacter()">
+        <ion-icon name="add"></ion-icon>
+        {{ 'HOME.BUTTONS.NEW_CHARACTER' | translate }}
+      </ion-button>
+      <ion-button *ngIf="charactersList?.length > 0" fill="clear" [size]="'large'" (click)="goToMyCharacters()">
+        <ion-icon name="people"></ion-icon>
+        {{ 'HOME.BUTTONS.MY_CHARACTERS' | translate }}
+      </ion-button>
+    </div>
+  </div>
 </ion-content>

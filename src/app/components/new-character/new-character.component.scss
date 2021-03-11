@@ -1,0 +1,117 @@
+@import "../../../theme/variables.scss";
+
+.new-character-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $app-dark-midnight-blue;
+    .title {
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+        h1 {
+            color: $app-white;
+            font-family: $app-main-font;
+        }
+    }
+    .main-slides-container {
+        flex: 1;
+        ion-slides {
+            height: 100%;
+            ion-slide {
+                display: flex;
+                flex-direction: column;
+                h2 {
+                    font-family: $app-main-font;
+                    color: $app-dark-turquoise;
+                    flex: 0;
+                    margin-bottom: -14px;
+                    padding: 2px 8px;
+                    z-index: 2;
+                    border-radius: 5px;
+                    box-shadow: 0px 0px 5px 1px $app-dark-turquoise;
+                    background-color: $app-dark-midnight-blue;
+                }
+                ion-input {
+                    --padding-bottom: 0;
+                    font-family: $app-main-font !important;
+                    font-size: 26px !important;
+                    color: $app-dark-turquoise;
+                }
+                .selection-container {
+                    align-self: flex-start;
+                    justify-content: center;
+                    display: flex;
+                    flex: 1;
+                    width: calc(100% - 30px);
+                    align-items: center;
+                    margin: 0 15px 5px 15px;
+                    padding: 5px;
+                    box-shadow: 0px 0px 5px 1px $app-dark-turquoise;
+                    border-radius: 5px;
+                    .list-items {
+                        flex: 1;
+                        ul {
+                            list-style: none;
+                            padding: 0 10px;
+                            .selection-item {
+                                padding: 2px 5px;
+                                font-family: $app-main-font;
+                                color: $app-dark-turquoise;
+                                &.selected {
+                                    box-shadow: 0px 0px 10px 1px $app-dark-turquoise;
+                                    border: none;
+                                    border-radius: 5px;
+                                    color: white;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                    .selection-image {
+                        flex: 1;
+                        margin: 20px;
+                        border: none;
+                        border-radius: 5px;
+                        height: 100%;
+                        position: relative;
+                        img {
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            top: 0;
+                            right: 0;
+                            padding: 0 5px;
+                            margin: auto;
+                        }
+                    }
+                    ion-segment ion-segment-button {
+                        color: $app-dark-turquoise;
+                    }
+                }
+            }
+        }
+    }
+    .footer-buttons {
+        flex: 0;
+        margin: 20px;
+        min-height: 10%;
+        display: flex;
+        justify-content: space-around;
+        ion-button {
+            margin: 10px 0;
+            font-family: $app-main-font;
+            font-size: 1.2em;
+            background-color: $app-dark-midnight-blue-transparent;
+            color: $app-white;
+            border-radius: 6px;
+            box-shadow: 0px 0px 10px 1px $app-dark-turquoise;
+            ion-icon {
+                margin-right: 10px;
+            }
+            &:focus, &:active, &:hover {
+                background-color: $app-dark-turquoise;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+<p-accordion class="block-accordion">
+  <p-accordionTab [selected]="'true'" [header]="'CHARACTER.BLOCK.SKILLS.TITLE' | translate">
+    <div class="skills-container">
+      <div class="skill-row" *ngFor="let skill of character.skills; let i = index">
+        <ng-container *ngIf="!editMode">
+          <div class="skill-label">{{'CHARACTER.SKILLS.' + skill.key | translate}}</div>
+          <div class="skill-total">{{getSkillTotal(skill)}}</div>
+        </ng-container>
+        <ng-container *ngIf="editMode">
+          <div class="skill-label">
+            {{'CHARACTER.SKILLS.' + skill.key | translate}} :
+          </div>
+          <div class="skill-input">
+            <div class="skill-total">{{getSkillTotal(skill)}}</div>
+            <label>{{'CHARACTER.BLOCK.SKILLS.TOTAL' | translate}}</label>
+          </div>
+          <div class="skill-input">
+              <p-spinner size="1" [maxlength]="2" [min]="0" [max]="100" [(ngModel)]="skill.ranks"></p-spinner>
+              <label>{{'CHARACTER.BLOCK.SKILLS.RANK' | translate}}</label>
+            </div>
+          <div class="skill-input">
+            <p-spinner size="1" [maxlength]="2" [min]="minClassBonus" [max]="100" [(ngModel)]="skill.classBonus"></p-spinner>
+            <label>{{'CHARACTER.BLOCK.SKILLS.CLASS_BONUS' | translate}}</label>
+          </div>
+          <div class="skill-input">
+            <div class="skill-total">{{getSkillAbilityModifier(skill)}}</div>
+            <label>{{'CHARACTER.BLOCK.SKILLS.ABILITY_MODIFIER' | translate}}</label>
+          </div>
+          <div class="skill-input">
+            <p-spinner size="1" [maxlength]="2" [min]="minMiscModifier" [max]="100" [(ngModel)]="skill.miscModifier"></p-spinner>
+            <label>{{'CHARACTER.BLOCK.SKILLS.MISC_MODIFIER' | translate}}</label>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </p-accordionTab>
+</p-accordion>

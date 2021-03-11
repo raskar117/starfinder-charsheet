@@ -1,0 +1,13 @@
+<div class="counter">
+    <div class="points" *ngIf="!editMode">
+        <button class="modifier-button" [disabled]="currentValue >= total" (click)="increasePoint()">+</button>
+        <h6>{{ currentValue }} / {{ total }}</h6>
+        <button class="modifier-button" [disabled]="currentValue <= 0" (click)="decreasePoint()">-</button>
+    </div>
+    <div class="points" *ngIf="editMode">
+        <button class="modifier-button" (click)="increaseTotal()">+</button>
+        <h6>{{ total }}</h6>
+        <button class="modifier-button" [disabled]="currentValue <= 0" (click)="decreaseTotal()">-</button>
+    </div>
+    <span class="label">{{ placeholder }}</span>
+</div>

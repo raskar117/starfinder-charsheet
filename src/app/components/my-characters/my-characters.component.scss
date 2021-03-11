@@ -1,0 +1,73 @@
+@import "../../../theme/variables.scss";
+
+ion-header {
+    ion-title {
+        font-family: $app-main-font;
+        font-size: 2em;
+        font-weight: bold;
+    }
+}
+
+ion-content {
+    .characters-container {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        overflow-y: auto;
+        padding: 0 5px;
+        background-image: url('../../../assets/images/homepage.png');
+        .character-card {
+            flex: 1 1 auto;
+            font-family: $app-main-font;
+            margin: 10px 5px;
+            height: 135px;
+            min-width: 150px;
+            ion-card-header {
+                display: flex;
+                justify-content: space-between;
+                font-size: 1.6em;
+                font-weight: bold;
+                background-color: $app-dark-slate-blue;
+                color: $app-white;
+                text-shadow: 1px 1px 1px $app-dark-slate-gray;
+                padding: 5px 10px;
+                .level-value {
+                    background-color: $app-orange;
+                    width: 32px;
+                    height: 32px;
+                    text-align: center;
+                    border-radius: 50%
+                }
+            }
+            ion-card-content {
+                padding: 5px 10px;
+                color: $app-white;
+                font-weight: bold;
+                background-color: $app-dark-midnight-blue;
+                .row {
+                    margin-bottom: 3px;
+                    ion-icon {
+                        padding-right: 5px;
+                    }
+                }
+                .footer {
+                    border-top: 1px solid $app-white;
+                    display: flex;
+                    justify-content: space-around;
+                    ion-button {
+                        color: $app-white;
+                        font-size: 0.9em;
+                    }
+                }
+            }
+            &:active {
+                ion-card-header {
+                    background-color: $app-turquoise;
+                }
+                ion-card-content {
+                    background-color: $app-midnight-blue;
+                }
+            }
+        }
+    }
+}

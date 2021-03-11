@@ -1,0 +1,37 @@
+<ion-header class="character-header">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      My Characters
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="characters-container">
+    <ion-card class="character-card" *ngFor="let char of charactersList" (click)="goToCharacter(char)">
+      <ion-card-header>
+        {{char?.information?.name}}
+        <div class="level-value">{{char?.information?.level}}</div>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="row">
+          <ion-icon name="ios-body"></ion-icon>{{char?.information?.race}}
+        </div>
+        <div class="row">
+          <ion-icon name="school"></ion-icon>{{char?.information?.classType}}
+        </div>
+        <div class="footer">
+          <ion-button fill="clear" size="small" (click)="editCharacter($event, char)">
+            <ion-icon name="create"></ion-icon>
+          </ion-button>
+          <ion-button fill="clear" size="small" (click)="deleteCharacter($event, char)">
+            <ion-icon name="trash"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

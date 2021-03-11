@@ -1,0 +1,15 @@
+<ng-container *ngIf="editMode">
+    <ion-item>
+        <ion-label>{{placeholder}}</ion-label>
+        <ion-select [(ngModel)]="currentValue">
+            <ion-select-option *ngFor="let option of values" [value]="option">{{tradEnumKey + '.' + option | translate}}
+            </ion-select-option>
+        </ion-select>
+    </ion-item>
+</ng-container>
+<ng-container *ngIf="!editMode">
+    <div class="readonly-value">
+        <span class="label">{{placeholder}}</span>
+        <span class="value">{{currentValue}}</span>
+    </div>
+</ng-container>

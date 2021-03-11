@@ -1,0 +1,12 @@
+<ng-container *ngIf="editMode">
+    <ion-item>
+        <ion-label position="fixed">{{placeholder}}</ion-label>
+        <ion-input class="charsheet-input" [type]="type" [(ngModel)]="currentValue"></ion-input>
+    </ion-item>
+</ng-container>
+<ng-container *ngIf="!editMode">
+    <div class="readonly-value">
+        <span class="label">{{placeholder}}</span>
+        <span class="value">{{currentValue}}</span>
+    </div>
+</ng-container>

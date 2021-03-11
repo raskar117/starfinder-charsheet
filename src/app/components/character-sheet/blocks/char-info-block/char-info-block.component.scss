@@ -1,0 +1,33 @@
+@import "../../../../../theme/variables.scss";
+
+.accordion-char-info {
+    .readonly-grid {
+        ion-col {
+            &:not(:last-child) {
+                border-right: 1px solid $app-main-border-color; 
+            }
+            ion-row {
+                font-family: $app-main-font;
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+                min-height: 20px;
+                ::ng-deep app-input-select, app-input-text {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    ion-col {
+        ion-row {
+            font-family: $app-main-font;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            min-height: 20px;
+            ::ng-deep app-input-select, app-input-text {
+                width: 100%;
+            }
+        }
+    }
+}

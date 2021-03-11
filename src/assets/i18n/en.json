@@ -1,0 +1,169 @@
+{
+  "APP": {
+    "TITLE": "Starfinder Character Sheet"
+  },
+  "HOME": {
+    "BUTTONS": {
+      "NEW_CHARACTER": "New character",
+      "MY_CHARACTERS": "My characters"
+    }
+  },
+  "NEW_CHARACTER": {
+    "TITLE": "New character",
+    "INPUT_NAME": "Enter character's name",
+    "INPUT_RACE": "Choose race",
+    "INPUT_CLASS": "Choose class",
+    "BACK": "Back",
+    "NEXT": "Next"
+  },
+  "CHARACTER": {
+    "LEVEL" : {
+      "TITLE": "Level"
+    },
+    "SLIDES": {
+      "INFORMATIONS": "Description",
+      "CHARACTERISTICS": "Abilities & Skills",
+      "ARMOR": "Armor",
+      "WEAPONS": "Weapons"
+    },
+    "BLOCK": {
+      "INFORMATION": {
+        "TITLE": "Information",
+        "CLASS": "Class",
+        "RACE": "Race",
+        "THEME": "Theme",
+        "SIZE": "Size",
+        "SPEED": "Speed",
+        "GENDER": "Gender",
+        "HOMEWORLD": "Home World",
+        "ALIGNMENT": "Alignment",
+        "DEITY": "Deity",
+        "PLAYER": "Player"
+      },
+      "ABILITIES_SCORE": {
+        "TITLE": "Ability Score"
+      },
+      "SKILLS": {
+        "TITLE": "Skills",
+        "TOTAL": "Total",
+        "RANK": "Rank",
+        "CLASS_BONUS": "Class bonus",
+        "ABILITY_MODIFIER": "Ability mod",
+        "MISC_MODIFIER": "Misc mod"
+      },
+      "HEALTH_RESOLVE": {
+        "TITLE": "Health and Resolve",
+        "STAMINA": "Stamina Points",
+        "HIT": "Hit Points",
+        "RESOLVE": "Resolve Points"
+      },
+      "ARMOR_CLASS": {
+        "TITLE": "Armor class",
+        "ENERGY_ARMOR_CLASS": {
+          "SHORT_TEXT": "EAC",
+          "FULL_TEXT": "Energy Armor Class"
+        },
+        "KINETIC_ARMOR_CLASS": {
+          "SHORT_TEXT": "KAC",
+          "FULL_TEXT": "Kinetic Armor Class"
+        },
+        "AC_VS_COMBAT": "AC VS. Combat maneuvers",
+        "TOTAL": "Total",
+        "ARMOR_BONUS": "Armor bonus",
+        "DEX_MODIFIER": "Dex mod",
+        "MISC_MODIFIER": "Misc mod"
+      },
+      "SAVING_THROWS": {
+        "TITLE": "Saving throws",
+        "TOTAL": "Total",
+        "BASE_SAVE": "Base save",
+        "ABILITY_MODIFIER": "Ability mod",
+        "MISC_MODIFIER": "Misc mod"
+      }
+    },
+    "ABILITY": {
+      "STRENGTH": "Strength",
+      "DEXTERITY": "Dexterity",
+      "CONSTITUTION": "Constitution",
+      "INTELLIGENCE": "Intelligence",
+      "WISDOM": "Wisdom",
+      "CHARISMA": "Charisma"
+    },
+    "CLASS": {
+      "ENVOY": "Envoy",
+      "MECHANIC": "Mechanic",
+      "MYSTIC": "Mystic",
+      "OPERATIVE": "Operative",
+      "SOLARIAN": "Solarian",
+      "SOLDIER": "Soldier",
+      "TECHNOMANCER": "Technomancer"
+    },
+    "GENDER": {
+      "MALE": "Male",
+      "FEMALE": "Female"
+    },
+    "RACE": {
+      "ANDROID": "Android",
+      "HUMAN": "Human",
+      "KASATHA": "Kasatha",
+      "LASHUNTA": "Lashunta",
+      "SHIRREN": "Shirren",
+      "VESK": "Vesk",
+      "YSOKI": "Ysoki"
+    },
+    "SAVING_THROWS": {
+      "FORTITUDE": "Fortitude",
+      "REFLEX": "Reflex",
+      "WILL": "Will"
+    },
+    "SKILLS": {
+      "ACROBATICS": "Acrobatics",
+      "ATHLETICS": "Athletics",
+      "BLUFF": "Bluff",
+      "COMPUTERS": "Computers",
+      "CULTURE": "Culture",
+      "DIPLOMACY": "Diplomacy",
+      "DISGUISE": "Disguise",
+      "ENGINEERING": "Engineering",
+      "INTIMIDATE": "Intimidate",
+      "LIFESCIENCE": "Life Science",
+      "MEDICINE": "Medicine",
+      "MYSTICISM": "Mysticism",
+      "PERCEPTION": "Perception",
+      "PHYSICALSCIENCE": "Physical Science",
+      "PILOTING": "Piloting",
+      "PROFESSIONS": "Professions",
+      "SENSEMOTIVE": "Sense Motive",
+      "SLEIGHTOFHAND": "Sleight of Hand",
+      "STEALTH": "Stealth",
+      "SURVIVAL": "Survival"
+    },
+    "THEME": {
+      "ACE_PILOT": "Ace Pilot",
+      "BIOTECHNICIAN": "Biotechnician",
+      "BOUNTY_HUNTER": "Bounty Hunter",
+      "CORPORATE_AGENT": "Corporate Agent",
+      "CULTIST": "Cultist",
+      "CYBERBORN": "Cyberborn",
+      "DEATH_TOUCHED": "Death-Touched",
+      "DRAGONBLOOD": "Dragonblood",
+      "DREAM_PROPHET": "Dream Prophet",
+      "FORMLESS_EMISSARY": "Formless Emissary",
+      "GLADIATOR": "Gladiator",
+      "ICON": "Icon",
+      "MERCENARY": "Mercenary",
+      "OUTLAW": "Outlaw",
+      "PRIEST": "Priest",
+      "ROBOTICIST": "Roboticist",
+      "SCHOLAR": "Scholar",
+      "SHIPBUILDER": "Shipbuilder (Manu)",
+      "SOLAR_DISCIPLE": "Solar Disciple",
+      "SPACE_PIRATE": "Space Pirate",
+      "SPACEFARER": "Spacefarer",
+      "TEMPERED_PILGRIM": "Tempered Pilgrim",
+      "WILD_WARDEN": "Wild Warden",
+      "XENOARCHAEOLOGIST": "Xenoarchaeologist",
+      "XENOSEEKER": "Xenoseeker"
+    }
+  }
+}

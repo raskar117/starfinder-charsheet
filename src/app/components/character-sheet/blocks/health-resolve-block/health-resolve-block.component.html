@@ -1,0 +1,17 @@
+<div class="health-resolve-container">
+  <app-input-counter [editMode]="editMode"
+    [(currentValue)]="character.healthResolve.stamina.current"
+    [(total)]="character.healthResolve.stamina.total"
+    [placeholder]="'CHARACTER.BLOCK.HEALTH_RESOLVE.STAMINA' | translate">
+  </app-input-counter>
+  <app-input-counter [editMode]="editMode"
+    [(currentValue)]="character.healthResolve.hit.current"
+    [(total)]="character.healthResolve.hit.total"
+    [placeholder]="'CHARACTER.BLOCK.HEALTH_RESOLVE.HIT' | translate">
+  </app-input-counter>
+  <app-input-counter [editMode]="editMode"
+    [(currentValue)]="character.healthResolve.resolve.current"
+    [(total)]="character.healthResolve.resolve.total"
+    [placeholder]="'CHARACTER.BLOCK.HEALTH_RESOLVE.RESOLVE' | translate">
+  </app-input-counter>
+</div>

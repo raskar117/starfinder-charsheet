@@ -1,0 +1,39 @@
+@import "../../../../../theme/variables.scss";
+
+.accordion-char-saving-throws {
+    .saving-throws-container {
+        display: flex;
+        .saving-throw-card {
+            flex: 1;
+            border-radius: 10%;
+            svg-icon {
+                height: 100%;
+                width: 100%;
+                ::ng-deep svg {
+                    fill: $app-dark-turquoise;
+                    height: 60%;
+                    width: 60%;
+                }
+            }
+            ion-card-header {
+                padding: 5%;
+                padding-top: 10%;
+                h4 {
+                    color: $app-dark-turquoise;
+                    font-weight: bold;
+                    font-size: 14px;
+                    font-family: $app-main-font;
+                    margin: 0;
+                    margin-top: 5px;
+                }
+            }
+            ion-card-content {
+                color: $app-white;
+                background-color: $app-dark-turquoise;
+                padding: 4%;
+                font-family: $app-main-font;
+                font-size: 1.5em;
+            }
+        }
+    }
+}
