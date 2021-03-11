@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IonicStorageModule } from '@ionic/storage';
 import { MyCharactersModule } from './components/my-characters/my-characters.module';
 import { SharedServices } from './services/shared-services.service';
+import { NewCharacterModule } from './components/new-character/new-character.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -45,6 +46,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     RouterModule.forRoot([]),
     AngularSvgIconModule,
     HomePageModule,
+    NewCharacterModule,
     MyCharactersModule,
     CharacterSheetModule
   ],
