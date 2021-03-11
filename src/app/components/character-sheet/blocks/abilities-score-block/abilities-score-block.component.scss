@@ -36,9 +36,9 @@
       font-size: 20px;
       margin-bottom: 0;
     }
-    /deep/ .ui-spinner {
+    ::ng-deep .p-spinner {
       width: 100%;
-      .ui-spinner-input {
+      .p-spinner-input {
         padding: 3px 12px 3px 5px;
         font-family: $app-main-font;
         height: 30px;
@@ -47,7 +47,7 @@
         border-radius: 0;
         font-size: 20px;
       }
-      .ui-spinner-button {
+      .p-spinner-button {
         width: 12px;
         font-size: 10px;
         background: transparent;

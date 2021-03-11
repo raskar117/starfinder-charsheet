@@ -1,9 +1,9 @@
 @import "../../../../../theme/variables.scss";
 
-.ui-float-label {
+.p-float-label {
     font-family: $app-main-font;
     height: 40px;
-    .ui-inputtext {
+    .p-inputtext {
         padding-left: 0;
         padding-bottom: 0;
         color: $app-input-value-color;
@@ -16,7 +16,7 @@
         top: 10px;
         margin-top: 0; 
     }
-    &>input.ui-state-filled ~ label, &>input:focus ~ label {
+    &>input.p-state-filled ~ label, &>input:focus ~ label {
         top: 30px;
         left: 0;
     }

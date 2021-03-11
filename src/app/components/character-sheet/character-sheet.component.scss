@@ -72,10 +72,10 @@
     }
 }
 
-/deep/ .block-accordion {
-    .ui-accordion {
-        .ui-accordion-header, .ui-accordion-header:not(.ui-state-active):not(.ui-state-disabled),
-        .ui-accordion-header:not(.ui-state-disabled).ui-state-active {
+::ng-deep .block-accordion {
+    .p-accordion {
+        .p-accordion-header, .p-accordion-header:not(.p-state-active):not(.p-state-disabled),
+        .p-accordion-header:not(.p-state-disabled).p-state-active {
             a {
                 font-family: $app-main-font;
                 color: $app-white;
@@ -88,12 +88,12 @@
                 background-color: $app-dark-slate-blue;
                 -webkit-clip-path: polygon(0 0, 92% 0%, 100% 30%, 100% 100%, 80% 100%, 7% 100%, 0% 72%, 0% 20%);
                 clip-path: polygon(0 0, 92% 0%, 100% 30%, 100% 100%, 80% 100%, 7% 100%, 0% 72%, 0% 20%);
-                .ui-accordion-toggle-icon {
+                .p-accordion-toggle-icon {
                     color: $app-white;
                 }
             }
             &:hover a {
-                .ui-accordion-toggle-icon {
+                .p-accordion-toggle-icon {
                     color: $app-white;
                 }
                 color: $app-white;
@@ -102,7 +102,7 @@
                 border-width: 0px 2px 2px 0px;
             }
         }
-        .ui-accordion-content {
+        .p-accordion-content {
             border: 0;
             padding: 0;
             margin-left: 10px;
@@ -114,7 +114,7 @@
     }
 }
 
-/deep/ .item-native {
+::ng-deep .item-native {
     padding: 0 !important;
 }
 
@@ -126,7 +126,7 @@
     }
 }
 
-/deep/ .number-block-separator {
+::ng-deep .number-block-separator {
     min-height: 100%;
     font-size: 16px;
     padding-top: 2px;
