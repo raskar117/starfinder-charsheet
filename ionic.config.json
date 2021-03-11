@@ -1,7 +1,5 @@
 {
   "name": "sf-charsheet",
-  "integrations": {
-    "cordova": {}
-  },
+  "integrations": {},
   "type": "angular"
 }
