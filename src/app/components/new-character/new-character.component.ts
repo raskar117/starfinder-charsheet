@@ -1,5 +1,5 @@
 import { ClassType } from './../../enums/class-type.enum';
-import { Nav, Slides } from '@ionic/angular';
+import { IonNav, IonSlides } from '@ionic/angular';
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { Character } from '../../models/character.model';
 import { CharacterService } from '../../services/character.service';
@@ -14,7 +14,7 @@ import { CharacterSheetComponent } from '../character-sheet/character-sheet.comp
     styleUrls: ['./new-character.component.scss']
 })
 export class NewCharacterComponent implements OnInit, OnDestroy {
-    @ViewChild('slidesContainer') slidesContainer: Slides;
+    @ViewChild(IonSlides) slidesContainer: IonSlides;
 
     public newCharacter: Character;
     public editMode: boolean;
@@ -25,7 +25,7 @@ export class NewCharacterComponent implements OnInit, OnDestroy {
     public genders = Object.keys(Gender);
 
     constructor(
-        private nav: Nav,
+        private nav: IonNav,
         private characterService: CharacterService,
         private sharedServices: SharedServices
     ) { }
@@ -39,12 +39,11 @@ export class NewCharacterComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy() {
-        this.saveCharacter();
     }
 
     public saveCharacter() {
         this.characterService.saveCharacter(this.newCharacter).subscribe((id) => {
-            this.nav.push(NewCharacterComponent, {
+            this.nav.push(CharacterSheetComponent, {
                 character: this.newCharacter,
                 editMode: true
             });
@@ -52,14 +51,18 @@ export class NewCharacterComponent implements OnInit, OnDestroy {
     }
 
     public goBack() {
-        this.activeSlide--;
-        this.slidesContainer.slideTo(this.activeSlide);
+        if (this.activeSlide <= 0) {
+            this.nav.pop();
+        } else {
+            this.activeSlide--;
+            this.slidesContainer.slideTo(this.activeSlide);
+        }
     }
 
     public goForward() {
         this.slidesContainer.isEnd().then((isEnd) => {
             if (isEnd) {
-                this.nav.push(CharacterSheetComponent, {character: this.newCharacter});
+                this.saveCharacter();
             } else {
                 this.activeSlide++;
                 this.slidesContainer.slideTo(this.activeSlide);

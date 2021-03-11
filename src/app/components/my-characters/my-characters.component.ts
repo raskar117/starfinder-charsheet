@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Nav } from '@ionic/angular';
+import { IonNav } from '@ionic/angular';
 import { Character } from '../../models/character.model';
 import { CharacterSheetComponent } from '../character-sheet/character-sheet.component';
 import { CharacterService } from '../../services/character.service';
@@ -14,7 +14,7 @@ export class MyCharactersComponent implements OnInit {
 
   constructor(
     private characterService: CharacterService,
-    private nav: Nav
+    private nav: IonNav
   ) { }
 
   ngOnInit() {

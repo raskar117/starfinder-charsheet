@@ -1,6 +1,6 @@
 import { Character } from './../../models/character.model';
 import { Component, OnInit } from '@angular/core';
-import { Nav } from '@ionic/angular';
+import { IonNav } from '@ionic/angular';
 import { CharacterService } from '../../services/character.service';
 import { MyCharactersComponent } from '../my-characters/my-characters.component';
 import { NewCharacterComponent } from '../new-character/new-character.component';
@@ -14,7 +14,7 @@ export class HomePage implements OnInit {
   public charactersList: Array<Character>;
 
   constructor(
-    private nav: Nav,
+    private nav: IonNav,
     private characterService: CharacterService
   ) { }
 

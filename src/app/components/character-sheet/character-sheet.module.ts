@@ -10,7 +10,6 @@ import { AccordionModule } from 'primeng/accordion';
 import { InputTextModule } from 'primeng/inputtext';
 import { SpinnerModule } from 'primeng/spinner';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AbilitiesScoreBlockComponent } from './blocks/abilities-score-block/abilities-score-block.component';
 import { SkillsBlockComponent } from './blocks/skills-block/skills-block.component';
 import { HealthResolveBlockComponent } from './blocks/health-resolve-block/health-resolve-block.component';
@@ -29,7 +28,6 @@ import { CharsheetInputSelectComponent } from './widgets/charsheet-input-select/
   imports: [
     CommonModule,
     BrowserModule,
-    BrowserAnimationsModule,
     FormsModule,
     IonicModule,
     AngularSvgIconModule,

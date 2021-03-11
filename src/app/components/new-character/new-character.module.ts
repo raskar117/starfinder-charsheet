@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { NewCharacterComponent } from './new-character.component';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { AngularSvgIconModule } from 'angular-svg-icon';
@@ -14,7 +13,6 @@ import { CharacterService } from '../../services/character.service';
     imports: [
         CommonModule,
         BrowserModule,
-        BrowserAnimationsModule,
         FormsModule,
         IonicModule,
         AngularSvgIconModule,

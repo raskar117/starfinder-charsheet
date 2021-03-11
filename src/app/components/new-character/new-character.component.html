@@ -3,7 +3,7 @@
         <h1>{{'NEW_CHARACTER.TITLE' | translate | uppercase}}</h1>
     </div>
     <div class="main-slides-container">
-        <ion-slides #slidesContainer [pager]="false">
+        <ion-slides [pager]="false">
             <ion-slide class="swiper-no-swiping">
                 <h2>{{'NEW_CHARACTER.INPUT_RACE' | translate}}</h2>
                 <div class="selection-container">
@@ -55,7 +55,7 @@
         </ion-slides>
     </div>
     <div class="footer-buttons">
-        <ion-button class="back-button" fill="clear" [size]="'medium'" [disabled]="activeSlide <= 0" (click)="goBack()">
+        <ion-button class="back-button" fill="clear" [size]="'medium'" (click)="goBack()">
             <ion-icon name="arrow-back"></ion-icon>
             {{'NEW_CHARACTER.BACK' | translate}}
         </ion-button>
